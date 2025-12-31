@@ -1,7 +1,7 @@
 ---
 title: Entrainment-Coherence ABM
 slug: entrainment-coherence-abm
-summary: Agent-based-model using Netlogo for testing how collective systems maintain adaptive capacity under stress.
+summary: Agent-based-model using Netlogo for testing how collective systems maintain adaptive capacity under stress. Distinguishing entrainment (phase-locking) from coherence (trajectory integrity) as coordination regimes.
 status: Active research
 scale: Collective
 icon: ph-graph

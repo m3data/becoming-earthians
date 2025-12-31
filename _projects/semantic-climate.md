@@ -1,7 +1,7 @@
 ---
-title: Semantic Climate
+title: Semantic Climate Phase Space
 slug: semantic-climate
-summary: Tracking the movement of meaning through conversational phase space — detecting when dialogue explores, converges, locks, or fragments.
+summary: Tracking the movement of meaning through conversational phase space and how it evolves. Currently focused on live human-AI coupling dynamics and post-hoc analysis of human-human dialogue.
 status: Active development
 scale: Dyadic / Collective
 icon: ph-chats-circle
@@ -16,6 +16,7 @@ related_questions:
 Semantic Climate instruments the **movement of meaning through conversational phase space** — tracking how dialogue explores, converges, reorganises, and stabilises over time.
 
 The system addresses questions that usually remain intuitive:
+
 - Is this dialogue exploring or converging?
 - How is meaning reorganising?
 - What coupling configuration are we in?

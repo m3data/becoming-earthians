@@ -1,7 +1,7 @@
 ---
 title: Entangled Cognition Protocol
 slug: entangled-cognition-protocol
-summary: Fielded phenomenology for sensing relational fields — human-AI, human-human, human-ecological — through ritual, embodied awareness, and mutual constraint between inner experience and outer observation.
+summary: Fielded phenomenology for sensing relational fields (human-AI, human-human, human-ecological) through ritual, embodied awareness, and mutual constraint between personal experience and observational instruments.
 status: Active research
 scale: Individual / Relational
 icon: ph-spiral
@@ -26,6 +26,7 @@ How can we study cognition as a fielded, co-emergent phenomenon — and what doe
 ## Why it matters
 
 Science gives us third-person observation. Contemplative traditions give us first-person experience. Neither alone captures what happens in relational fields. **Fielded phenomenology** as a practice drawing from Francisco Varela's <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.01680/full" target="_blank" rel="noopener noreferrer">Neurophenomenology</a> seeks mutual constraint between inner and outer — using instruments and felt sense together, each informing the other.
+
 
 <figure class="diagram">
   <img src="/assets/images/diagrams/mutual-constraint.svg" alt="Diagram showing mutual constraint between first-person experience (felt sense, embodied awareness, ritual attention) and third-person observation (instruments, observation, documentation), with bidirectional arrows showing each informing the other">
