@@ -85,6 +85,6 @@ Together, these provide windows into the relational substrate of cognition that 
 
 ## Related work
 
-- [Relational sensing](/methods/relational-sensing/) — how to instrument relationship
-- [Semantic Climate](/projects/semantic-climate/) — semantic coupling analysis
-- [EarthianBioSense](/projects/earthian-biosense/) — biosignal coupling detection
+- [Relational sensing]({{ '/methods/relational-sensing/' | relative_url }}) — how to instrument relationship
+- [Semantic Climate]({{ '/projects/semantic-climate/' | relative_url }}) — semantic coupling analysis
+- [EarthianBioSense]({{ '/projects/earthian-biosense/' | relative_url }}) — biosignal coupling detection

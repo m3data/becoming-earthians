@@ -55,4 +55,4 @@ This is not a question with a single answer. It is a question to live with, to p
 
 ---
 
-*For deeper entry points, see [Questions](/questions/) or explore specific [Projects](/projects/).*
+*For deeper entry points, see [Questions]({{ '/questions/' | relative_url }}) or explore specific [Projects]({{ '/projects/' | relative_url }}).*

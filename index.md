@@ -15,15 +15,18 @@ title: Home
   </section>
 
   <section class="home-intro">
-    <p>A portal into an ongoing inquiry.</p>
-    <p>The central question:</p>
+    <p>This site is a portal into an ongoing inquiry.</p>
+    <p>Guided by a central question:</p>
     <blockquote>
       How can humanity cultivate adaptive capacity commensurate with the scale, speed, and entanglement of contemporary crises — without collapsing into uniformity, control, or fragmentation?
     </blockquote>
+    <p>Humanity’s current adaptive mechanisms are mismatched with the scale and speed of contemporary crises, leading to systemic fatigue, entrainment pressures, and loss of diversity.</p>
   </section>
 
   <section class="home-entry-points">
-    <h2>You might enter here if you're interested in...</h2>
+    <h2>You might explore based on your interests...</h2>
+
+    <h3 class="entry-category">Core inquiries</h3>
     <ul class="entry-points">
       <li>
         <a href="{{ '/questions/adaptive-capacity/' | relative_url }}">
@@ -43,16 +46,24 @@ title: Home
           <span>How meaning emerges through relationship</span>
         </a>
       </li>
+    </ul>
+
+    <h3 class="entry-category">Tools & perspectives</h3>
+    <ul class="entry-points">
       <li>
         <a href="{{ '/methods/' | relative_url }}">
           <strong>Sensing and modeling</strong>
           <span>Instruments for detecting coherence in living systems</span>
         </a>
       </li>
+    </ul>
+
+    <h3 class="entry-category">Concrete work</h3>
+    <ul class="entry-points">
       <li>
         <a href="{{ '/projects/' | relative_url }}">
           <strong>Projects</strong>
-          <span>Concrete probes into these questions</span>
+          <span>Probes into these questions — biosensing, semantic analysis, simulation</span>
         </a>
       </li>
     </ul>

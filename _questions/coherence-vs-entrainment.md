@@ -96,6 +96,6 @@ This reframes debates about consensus, diversity, and coordination. The goal is 
 
 ## Related work
 
-- [Adaptive capacity](/questions/adaptive-capacity/) — the broader context
-- [Entrainment-Coherence ABM](/projects/entrainment-coherence-abm/) — the model
-- [Relational sensing](/methods/relational-sensing/) — detecting these patterns in living systems
+- [Adaptive capacity]({{ '/questions/adaptive-capacity/' | relative_url }}) — the broader context
+- [Entrainment-Coherence ABM]({{ '/projects/entrainment-coherence-abm/' | relative_url }}) — the model
+- [Relational sensing]({{ '/methods/relational-sensing/' | relative_url }}) — detecting these patterns in living systems

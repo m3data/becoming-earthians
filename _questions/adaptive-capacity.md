@@ -88,6 +88,6 @@ Ashby's Law of Requisite Variety states that a system must have sufficient inter
 
 ## Related work
 
-- [Coherence vs Entrainment](/questions/coherence-vs-entrainment/) — the mechanism in detail
-- [Entrainment-Coherence ABM](/projects/entrainment-coherence-abm/) — the model that tests these claims
-- [Agent-based modeling](/methods/agent-based-modeling/) — why this method is appropriate
+- [Coherence vs Entrainment]({{ '/questions/coherence-vs-entrainment/' | relative_url }}) — the mechanism in detail
+- [Entrainment-Coherence ABM]({{ '/projects/entrainment-coherence-abm/' | relative_url }}) — the model that tests these claims
+- [Agent-based modeling]({{ '/methods/agent-based-modeling/' | relative_url }}) — why this method is appropriate
