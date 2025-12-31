@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <!-- Soft shadow for depth -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#423D33" flood-opacity="0.1"/>
+    </filter>
+
+    <!-- Arrow marker -->
+    <marker id="arrow-charcoal" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#423D33"/>
+    </marker>
+    <marker id="arrow-terracotta" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D68A59"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#faf9f7"/>
+
+  <!-- Divider -->
+  <line x1="400" y1="60" x2="400" y2="340" stroke="#e0dbd3" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- ENTRAINMENT SIDE (Left) -->
+  <text x="200" y="45" font-family="Georgia, serif" font-size="22" font-weight="600" fill="#423D33" text-anchor="middle">Entrainment</text>
+  <text x="200" y="68" font-family="system-ui, sans-serif" font-size="12" fill="#6b6358" text-anchor="middle">phase-locking toward alignment</text>
+
+  <!-- Entrainment agents - all pointing same direction (uniform) -->
+  <g transform="translate(200, 190)">
+    <!-- Row 1 -->
+    <g transform="translate(-90, -70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#423D33" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="12" y2="-8" stroke="#423D33" stroke-width="2" marker-end="url(#arrow-charcoal)"/>
+    </g>
+    <g transform="translate(-30, -70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#423D33" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="12" y2="-8" stroke="#423D33" stroke-width="2" marker-end="url(#arrow-charcoal)"/>
+    </g>
+    <g transform="translate(30, -70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#423D33" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="12" y2="-8" stroke="#423D33" stroke-width="2" marker-end="url(#arrow-charcoal)"/>
+    </g>
+    <g transform="translate(90, -70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#423D33" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="12" y2="-8" stroke="#423D33" stroke-width="2" marker-end="url(#arrow-charcoal)"/>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(-60, 0)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#423D33" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="12" y2="-8" stroke="#423D33" stroke-width="2" marker-end="url(#arrow-charcoal)"/>
+    </g>
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#423D33" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="12" y2="-8" stroke="#423D33" stroke-width="2" marker-end="url(#arrow-charcoal)"/>
+    </g>
+    <g transform="translate(60, 0)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#423D33" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="12" y2="-8" stroke="#423D33" stroke-width="2" marker-end="url(#arrow-charcoal)"/>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(-90, 70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#423D33" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="12" y2="-8" stroke="#423D33" stroke-width="2" marker-end="url(#arrow-charcoal)"/>
+    </g>
+    <g transform="translate(-30, 70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#423D33" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="12" y2="-8" stroke="#423D33" stroke-width="2" marker-end="url(#arrow-charcoal)"/>
+    </g>
+    <g transform="translate(30, 70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#423D33" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="12" y2="-8" stroke="#423D33" stroke-width="2" marker-end="url(#arrow-charcoal)"/>
+    </g>
+    <g transform="translate(90, 70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#423D33" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="12" y2="-8" stroke="#423D33" stroke-width="2" marker-end="url(#arrow-charcoal)"/>
+    </g>
+  </g>
+
+  <!-- Entrainment characteristics -->
+  <text x="200" y="330" font-family="system-ui, sans-serif" font-size="13" fill="#6b6358" text-anchor="middle">uniform · synchronized · brittle</text>
+  <text x="200" y="350" font-family="system-ui, sans-serif" font-size="11" fill="#6b6358" text-anchor="middle" font-style="italic">the grip</text>
+
+
+  <!-- COHERENCE SIDE (Right) -->
+  <text x="600" y="45" font-family="Georgia, serif" font-size="22" font-weight="600" fill="#423D33" text-anchor="middle">Coherence</text>
+  <text x="600" y="68" font-family="system-ui, sans-serif" font-size="12" fill="#6b6358" text-anchor="middle">relational adaptation with identity</text>
+
+  <!-- Coherence agents - diverse orientations but connected -->
+  <g transform="translate(600, 190)">
+    <!-- Connection lines (subtle, showing relationship without uniformity) -->
+    <g stroke="#D68A59" stroke-width="1" stroke-opacity="0.3">
+      <line x1="-90" y1="-70" x2="-30" y2="-70"/>
+      <line x1="-30" y1="-70" x2="0" y2="0"/>
+      <line x1="0" y1="0" x2="-60" y2="0"/>
+      <line x1="-60" y1="0" x2="-90" y2="-70"/>
+      <line x1="30" y1="-70" x2="0" y2="0"/>
+      <line x1="0" y1="0" x2="60" y2="0"/>
+      <line x1="60" y1="0" x2="90" y2="-70"/>
+      <line x1="90" y1="-70" x2="30" y2="-70"/>
+      <line x1="-60" y1="0" x2="-90" y2="70"/>
+      <line x1="-90" y1="70" x2="-30" y2="70"/>
+      <line x1="-30" y1="70" x2="0" y2="0"/>
+      <line x1="0" y1="0" x2="30" y2="70"/>
+      <line x1="30" y1="70" x2="90" y2="70"/>
+      <line x1="90" y1="70" x2="60" y2="0"/>
+    </g>
+
+    <!-- Row 1 - varied orientations -->
+    <g transform="translate(-90, -70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#7B9361" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="-5" y2="-12" stroke="#D68A59" stroke-width="2" marker-end="url(#arrow-terracotta)"/>
+    </g>
+    <g transform="translate(-30, -70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#7B9361" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="10" y2="-10" stroke="#D68A59" stroke-width="2" marker-end="url(#arrow-terracotta)"/>
+    </g>
+    <g transform="translate(30, -70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#7B9361" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="14" y2="0" stroke="#D68A59" stroke-width="2" marker-end="url(#arrow-terracotta)"/>
+    </g>
+    <g transform="translate(90, -70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#7B9361" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="8" y2="-11" stroke="#D68A59" stroke-width="2" marker-end="url(#arrow-terracotta)"/>
+    </g>
+
+    <!-- Row 2 - varied orientations -->
+    <g transform="translate(-60, 0)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#7B9361" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="-12" y2="-6" stroke="#D68A59" stroke-width="2" marker-end="url(#arrow-terracotta)"/>
+    </g>
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#7B9361" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="4" y2="-13" stroke="#D68A59" stroke-width="2" marker-end="url(#arrow-terracotta)"/>
+    </g>
+    <g transform="translate(60, 0)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#7B9361" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="13" y2="5" stroke="#D68A59" stroke-width="2" marker-end="url(#arrow-terracotta)"/>
+    </g>
+
+    <!-- Row 3 - varied orientations -->
+    <g transform="translate(-90, 70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#7B9361" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="-10" y2="10" stroke="#D68A59" stroke-width="2" marker-end="url(#arrow-terracotta)"/>
+    </g>
+    <g transform="translate(-30, 70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#7B9361" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="0" y2="-14" stroke="#D68A59" stroke-width="2" marker-end="url(#arrow-terracotta)"/>
+    </g>
+    <g transform="translate(30, 70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#7B9361" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="11" y2="-9" stroke="#D68A59" stroke-width="2" marker-end="url(#arrow-terracotta)"/>
+    </g>
+    <g transform="translate(90, 70)">
+      <circle cx="0" cy="0" r="18" fill="#f5f0e8" stroke="#7B9361" stroke-width="1.5" filter="url(#shadow)"/>
+      <line x1="0" y1="0" x2="6" y2="12" stroke="#D68A59" stroke-width="2" marker-end="url(#arrow-terracotta)"/>
+    </g>
+  </g>
+
+  <!-- Coherence characteristics -->
+  <text x="600" y="330" font-family="system-ui, sans-serif" font-size="13" fill="#6b6358" text-anchor="middle">diverse · connected · adaptive</text>
+  <text x="600" y="350" font-family="system-ui, sans-serif" font-size="11" fill="#6b6358" text-anchor="middle" font-style="italic">the journey</text>
+
+</svg>

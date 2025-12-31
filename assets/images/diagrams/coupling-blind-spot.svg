@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" width="700" height="320">
+  <defs>
+    <!-- Soft shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#423D33" flood-opacity="0.12"/>
+    </filter>
+
+    <!-- Gradient for coupling zone -->
+    <linearGradient id="coupling-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D68A59" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#D68A59" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#D68A59" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="320" fill="#faf9f7"/>
+
+  <!-- Title -->
+  <text x="350" y="32" font-family="Georgia, serif" font-size="18" font-weight="600" fill="#423D33" text-anchor="middle">The Blind Spot</text>
+  <text x="350" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#6b6358" text-anchor="middle">current safety instruments the model — not the coupling</text>
+
+  <!-- Main diagram area -->
+  <g transform="translate(0, 70)">
+
+    <!-- MODEL (left side) -->
+    <g transform="translate(120, 100)">
+      <rect x="-70" y="-60" width="140" height="120" rx="6" fill="#f5f0e8" stroke="#7B9361" stroke-width="2" filter="url(#shadow)"/>
+      <text x="0" y="-25" font-family="Georgia, serif" font-size="14" font-weight="600" fill="#423D33" text-anchor="middle">Model</text>
+      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">outputs</text>
+      <text x="0" y="14" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">internals</text>
+      <text x="0" y="28" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">behaviour</text>
+
+      <!-- "Instrumented" indicator -->
+      <text x="0" y="75" font-family="system-ui, sans-serif" font-size="9" fill="#7B9361" text-anchor="middle" font-style="italic">✓ instrumented</text>
+    </g>
+
+    <!-- COUPLING ZONE (center) -->
+    <g transform="translate(350, 100)">
+      <!-- Coupling field -->
+      <ellipse cx="0" cy="0" rx="110" ry="80" fill="url(#coupling-gradient)" stroke="#D68A59" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+      <!-- What lives here -->
+      <text x="0" y="-45" font-family="Georgia, serif" font-size="12" font-weight="500" fill="#D68A59" text-anchor="middle">the relationship</text>
+
+      <text x="0" y="-18" font-family="system-ui, sans-serif" font-size="9" fill="#423D33" text-anchor="middle">epistemic override</text>
+      <text x="0" y="-4" font-family="system-ui, sans-serif" font-size="9" fill="#423D33" text-anchor="middle">somatic entrainment</text>
+      <text x="0" y="10" font-family="system-ui, sans-serif" font-size="9" fill="#423D33" text-anchor="middle">cognitive mimicry</text>
+      <text x="0" y="24" font-family="system-ui, sans-serif" font-size="9" fill="#423D33" text-anchor="middle">nervous system capture</text>
+
+      <!-- "Blind spot" indicator -->
+      <text x="0" y="95" font-family="system-ui, sans-serif" font-size="9" fill="#D68A59" text-anchor="middle" font-style="italic">← blind spot →</text>
+    </g>
+
+    <!-- HUMAN (right side) -->
+    <g transform="translate(580, 100)">
+      <rect x="-70" y="-60" width="140" height="120" rx="6" fill="#f5f0e8" stroke="#6b6358" stroke-width="2" filter="url(#shadow)"/>
+      <text x="0" y="-25" font-family="Georgia, serif" font-size="14" font-weight="600" fill="#423D33" text-anchor="middle">Human</text>
+      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">beliefs</text>
+      <text x="0" y="14" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">nervous system</text>
+      <text x="0" y="28" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">autonomy</text>
+
+      <!-- "Adapting" indicator -->
+      <text x="0" y="75" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle" font-style="italic">adapting...</text>
+    </g>
+
+    <!-- Connection lines -->
+    <line x1="190" y1="100" x2="240" y2="100" stroke="#423D33" stroke-width="1" stroke-opacity="0.3"/>
+    <line x1="460" y1="100" x2="510" y2="100" stroke="#423D33" stroke-width="1" stroke-opacity="0.3"/>
+
+  </g>
+
+  <!-- Bottom annotation -->
+  <text x="350" y="300" font-family="system-ui, sans-serif" font-size="10" fill="#6b6358" text-anchor="middle" font-style="italic">safety lives in the relationship, not just the model</text>
+
+</svg>

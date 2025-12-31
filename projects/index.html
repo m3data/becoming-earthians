@@ -1,0 +1,48 @@
+---
+layout: default
+title: Projects
+---
+
+<div class="section-index">
+  <header class="section-header">
+    <h1>Projects</h1>
+    <p class="summary">Concrete instantiations of the inquiry.</p>
+  </header>
+
+  <section class="ecosystem-overview">
+    <h2>The ECP Ecosystem</h2>
+    <p>Three projects form the core instrumentation with each capturing a different stream of data from the same underlying phenomenon. They converge in post-session coupling analysis.</p>
+
+    <figure class="diagram">
+      <img src="{{ '/assets/images/diagrams/ecosystem-streams.svg' | relative_url }}" alt="ECP ecosystem diagram showing three streams — biosignal, semantic, and phenomenological — converging in coupling analysis">
+    </figure>
+  </section>
+
+  <h2>All Projects</h2>
+
+  <div class="card-grid card-grid--2">
+    {% for project in site.projects %}
+    <a href="{{ project.url | relative_url }}" class="card card--clickable">
+      <div class="card-header">
+        <i class="ph {% if project.icon %}{{ project.icon }}{% else %}ph-cube{% endif %} card-icon"></i>
+        <div>
+          <h3 class="card-title">{{ project.title }}</h3>
+          {% if project.scale %}
+          <p class="card-subtitle">{{ project.scale }}</p>
+          {% endif %}
+        </div>
+      </div>
+      {% if project.summary %}
+      <div class="card-body">
+        <p>{{ project.summary }}</p>
+      </div>
+      {% endif %}
+      {% if project.status %}
+      <div class="card-footer">
+        <span class="status-badge">{{ project.status }}</span>
+      </div>
+      {% endif %}
+    </a>
+    {% endfor %}
+  </div>
+</div>

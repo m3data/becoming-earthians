@@ -1,0 +1,74 @@
+# Becoming Earthians
+# An inquiry into adaptive capacity under planetary-scale stress
+
+title: Becoming Earthians
+subtitle: An inquiry into how humans, technologies, and living systems learn to sustain adaptive capacity under planetary-scale stress
+description: >-
+  Exploring how coherence can be maintained under stress without collapsing
+  diversity, and how this difference can be sensed, modeled, and cultivated
+  through design, governance, and practice.
+
+author:
+  name: Mat Mytka
+  email: m3untold@gmail.com
+
+url: "https://m3data.github.io"
+baseurl: "/becoming-earthians"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Theme - using minima as base, will customize
+theme: minima
+
+# Permalink structure
+permalink: /:categories/:title/
+
+# Collections
+collections:
+  questions:
+    output: true
+    permalink: /questions/:title/
+  methods:
+    output: true
+    permalink: /methods/:title/
+  projects:
+    output: true
+    permalink: /projects/:title/
+
+# Default frontmatter
+defaults:
+  - scope:
+      path: ""
+      type: "questions"
+    values:
+      layout: "question"
+  - scope:
+      path: ""
+      type: "methods"
+    values:
+      layout: "method"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - initial-jekyll-site-spec.md
+  - README.md
+  - "*.sh"
+
+# No feeds, comments, or analytics
+plugins: []

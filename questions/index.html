@@ -1,0 +1,50 @@
+---
+layout: default
+title: Questions
+---
+
+<div class="section-index">
+  <header class="section-header">
+    <h1>Questions</h1>
+    <p class="summary">The conceptual spine of this inquiry. Each question opens onto methods, projects, and writings that engage it.</p>
+  </header>
+
+  {% assign central = site.questions | where: "slug", "adaptive-capacity" | first %}
+  {% if central %}
+  <div class="central-question">
+    <a href="{{ central.url | relative_url }}" class="card card--clickable card--accent">
+      <div class="card-header">
+        <i class="ph {% if central.icon %}{{ central.icon }}{% else %}ph-question-mark{% endif %} card-icon"></i>
+        <div>
+          <h3 class="card-title">{{ central.title }}</h3>
+        </div>
+      </div>
+      {% if central.summary %}
+      <div class="card-body">
+        <p>{{ central.summary }}</p>
+      </div>
+      {% endif %}
+    </a>
+  </div>
+  {% endif %}
+
+  <div class="card-grid card-grid--2">
+    {% for question in site.questions %}
+    {% unless question.slug == "adaptive-capacity" %}
+    <a href="{{ question.url | relative_url }}" class="card card--clickable">
+      <div class="card-header">
+        <i class="ph {% if question.icon %}{{ question.icon }}{% else %}ph-question{% endif %} card-icon"></i>
+        <div>
+          <h3 class="card-title">{{ question.title }}</h3>
+        </div>
+      </div>
+      {% if question.summary %}
+      <div class="card-body">
+        <p>{{ question.summary }}</p>
+      </div>
+      {% endif %}
+    </a>
+    {% endunless %}
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+  <defs>
+    <!-- Soft shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#423D33" flood-opacity="0.12"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow-olive" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#7B9361"/>
+    </marker>
+    <marker id="arrow-terracotta" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#D68A59"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="300" fill="#faf9f7"/>
+
+  <!-- Title -->
+  <text x="300" y="32" font-family="Georgia, serif" font-size="18" font-weight="600" fill="#423D33" text-anchor="middle">Mutual Constraint</text>
+  <text x="300" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#6b6358" text-anchor="middle">inner and outer informing each other</text>
+
+  <!-- Main diagram -->
+  <g transform="translate(0, 65)">
+
+    <!-- FIRST-PERSON (left) -->
+    <g transform="translate(120, 95)">
+      <circle cx="0" cy="0" r="65" fill="#f5f0e8" stroke="#7B9361" stroke-width="2" filter="url(#shadow)"/>
+      <text x="0" y="-30" font-family="Georgia, serif" font-size="13" font-weight="600" fill="#423D33" text-anchor="middle">First-Person</text>
+      <text x="0" y="-10" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">felt sense</text>
+      <text x="0" y="4" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">embodied awareness</text>
+      <text x="0" y="18" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">ritual attention</text>
+    </g>
+
+    <!-- THIRD-PERSON (right) -->
+    <g transform="translate(480, 95)">
+      <circle cx="0" cy="0" r="65" fill="#f5f0e8" stroke="#D68A59" stroke-width="2" filter="url(#shadow)"/>
+      <text x="0" y="-30" font-family="Georgia, serif" font-size="13" font-weight="600" fill="#423D33" text-anchor="middle">Third-Person</text>
+      <text x="0" y="-10" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">instruments</text>
+      <text x="0" y="4" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">observation</text>
+      <text x="0" y="18" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">documentation</text>
+    </g>
+
+    <!-- MUTUAL CONSTRAINT ARROWS -->
+    <!-- Top arrow: first-person informs third-person -->
+    <line x1="190" y1="70" x2="405" y2="70" stroke="#7B9361" stroke-width="2" marker-end="url(#arrow-olive)"/>
+    <text x="300" y="60" font-family="system-ui, sans-serif" font-size="9" fill="#7B9361" text-anchor="middle" font-style="italic">experience grounds observation</text>
+
+    <!-- Bottom arrow: third-person informs first-person -->
+    <line x1="410" y1="120" x2="195" y2="120" stroke="#D68A59" stroke-width="2" marker-end="url(#arrow-terracotta)"/>
+    <text x="300" y="145" font-family="system-ui, sans-serif" font-size="9" fill="#D68A59" text-anchor="middle" font-style="italic">observation informs experience</text>
+
+    <!-- Center label -->
+    <text x="300" y="95" font-family="Georgia, serif" font-size="11" fill="#423D33" text-anchor="middle">the field</text>
+
+  </g>
+
+  <!-- Bottom annotation -->
+  <text x="300" y="280" font-family="system-ui, sans-serif" font-size="10" fill="#6b6358" text-anchor="middle" font-style="italic">neither alone captures what happens in relational fields</text>
+
+</svg>

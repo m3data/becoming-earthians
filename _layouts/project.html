@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<article class="project">
+  <header class="project-header">
+    <p class="label">Project{% if page.status %} · {{ page.status }}{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}
+    <p class="summary">{{ page.summary }}</p>
+    {% endif %}
+    {% if page.scale %}
+    <p class="scale"><i class="ph ph-circles-four"></i> {{ page.scale }}</p>
+    {% endif %}
+  </header>
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+
+  {% if page.repo %}
+  <div class="project-links">
+    <a href="{{ page.repo }}" class="repo-link">{% if page.repo contains 'github' %}<i class="ph ph-github-logo"></i> {% endif %}View repository</a>
+  </div>
+  {% elsif page.repo_coming_soon %}
+  <div class="project-links">
+    <span class="repo-coming-soon"><i class="ph ph-github-logo"></i> Repository coming soon</span>
+  </div>
+  {% endif %}
+
+  {% if page.related_questions %}
+  <aside class="related">
+    <h3>Questions this project explores</h3>
+    <ul>
+      {% for question_slug in page.related_questions %}
+        {% assign question = site.questions | where: "slug", question_slug | first %}
+        {% if question %}
+        <li><a href="{{ question.url | relative_url }}">{{ question.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </aside>
+  {% endif %}
+</article>

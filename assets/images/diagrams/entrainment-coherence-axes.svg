@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <!-- Soft shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#423D33" flood-opacity="0.12"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#423D33"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="#faf9f7"/>
+
+  <!-- Title -->
+  <text x="300" y="32" font-family="Georgia, serif" font-size="18" font-weight="600" fill="#423D33" text-anchor="middle">Entrainment ≠ Coherence</text>
+  <text x="300" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#6b6358" text-anchor="middle">different activities, different configurations</text>
+
+  <!-- Axes -->
+  <g transform="translate(100, 320)">
+    <!-- X-axis: Entrainment -->
+    <line x1="0" y1="0" x2="420" y2="0" stroke="#423D33" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="210" y="28" font-family="system-ui, sans-serif" font-size="11" fill="#423D33" text-anchor="middle">Entrainment</text>
+    <text x="210" y="42" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle" font-style="italic">breath-heart coupling</text>
+
+    <!-- Y-axis: Coherence -->
+    <line x1="0" y1="0" x2="0" y2="-250" stroke="#423D33" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="-15" y="-125" font-family="system-ui, sans-serif" font-size="11" fill="#423D33" text-anchor="middle" transform="rotate(-90, -15, -125)">Coherence</text>
+    <text x="-32" y="-125" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle" transform="rotate(-90, -32, -125)" font-style="italic">trajectory integrity</text>
+
+    <!-- Axis labels (low/high) -->
+    <text x="30" y="15" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358">low</text>
+    <text x="380" y="15" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358">high</text>
+    <text x="-8" y="-20" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="end">low</text>
+    <text x="-8" y="-220" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="end">high</text>
+
+    <!-- Quadrant hints (very subtle) -->
+    <rect x="0" y="-250" width="200" height="125" fill="#7B9361" fill-opacity="0.06"/>
+    <rect x="200" y="-125" width="200" height="125" fill="#D68A59" fill-opacity="0.06"/>
+
+    <!-- Data point: Meditation (high coherence, low entrainment) -->
+    <g transform="translate(80, -200)">
+      <circle cx="0" cy="0" r="24" fill="#7B9361" fill-opacity="0.2" stroke="#7B9361" stroke-width="2" filter="url(#shadow)"/>
+      <circle cx="0" cy="0" r="6" fill="#7B9361"/>
+      <text x="0" y="45" font-family="Georgia, serif" font-size="12" font-weight="500" fill="#423D33" text-anchor="middle">Meditation</text>
+      <text x="0" y="59" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">coherence 0.55</text>
+      <text x="0" y="71" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">entrainment low</text>
+    </g>
+
+    <!-- Data point: Rhythmic Activity (high entrainment, lower coherence) -->
+    <g transform="translate(320, -90)">
+      <circle cx="0" cy="0" r="24" fill="#D68A59" fill-opacity="0.2" stroke="#D68A59" stroke-width="2" filter="url(#shadow)"/>
+      <circle cx="0" cy="0" r="6" fill="#D68A59"/>
+      <text x="0" y="45" font-family="Georgia, serif" font-size="12" font-weight="500" fill="#423D33" text-anchor="middle">Rhythmic Activity</text>
+      <text x="0" y="59" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">entrainment 0.50+</text>
+      <text x="0" y="71" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle">coherence lower</text>
+    </g>
+
+    <!-- Connecting insight line (dashed, showing inversion) -->
+    <path d="M 80 -200 Q 200 -145, 320 -90"
+          fill="none"
+          stroke="#6b6358"
+          stroke-width="1"
+          stroke-dasharray="4,4"
+          stroke-opacity="0.5"/>
+
+  </g>
+
+  <!-- Insight annotation -->
+  <text x="300" y="385" font-family="system-ui, sans-serif" font-size="9" fill="#6b6358" text-anchor="middle" font-style="italic">the relationship inverts depending on what the nervous system is doing</text>
+
+</svg>

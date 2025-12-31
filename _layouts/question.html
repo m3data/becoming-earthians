@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<article class="question">
+  <header class="question-header">
+    <p class="label">Question</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}
+    <p class="summary">{{ page.summary }}</p>
+    {% endif %}
+  </header>
+
+  <div class="question-content">
+    {{ content }}
+  </div>
+
+  {% if page.related_methods or page.related_projects %}
+  <aside class="related">
+    {% if page.related_methods %}
+    <div class="related-methods">
+      <h3>Methods</h3>
+      <ul>
+        {% for method_slug in page.related_methods %}
+          {% assign method = site.methods | where: "slug", method_slug | first %}
+          {% if method %}
+          <li><a href="{{ method.url | relative_url }}">{{ method.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if page.related_projects %}
+    <div class="related-projects">
+      <h3>Projects</h3>
+      <ul>
+        {% for project_slug in page.related_projects %}
+          {% assign project = site.projects | where: "slug", project_slug | first %}
+          {% if project %}
+          <li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </aside>
+  {% endif %}
+</article>

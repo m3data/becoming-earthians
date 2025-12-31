@@ -1,0 +1,29 @@
+---
+layout: default
+title: Methods
+---
+
+<div class="section-index">
+  <header class="section-header">
+    <h1>Methods</h1>
+    <p class="summary">How inquiry is conducted.</p>
+  </header>
+
+  <div class="card-grid card-grid--2">
+    {% for method in site.methods %}
+    <a href="{{ method.url | relative_url }}" class="card card--clickable">
+      <div class="card-header">
+        <i class="ph {% if method.icon %}{{ method.icon }}{% else %}ph-compass{% endif %} card-icon"></i>
+        <div>
+          <h3 class="card-title">{{ method.title }}</h3>
+        </div>
+      </div>
+      {% if method.summary %}
+      <div class="card-body">
+        <p>{{ method.summary }}</p>
+      </div>
+      {% endif %}
+    </a>
+    {% endfor %}
+  </div>
+</div>

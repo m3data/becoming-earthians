@@ -1,0 +1,205 @@
+---
+layout: default
+title: Lineage
+---
+
+<div class="lineage-page">
+  <header class="section-header">
+    <h1>Lineage & Influences</h1>
+    <p class="summary">The intellectual tributaries feeding this inquiry (Work in progress). Click and drag to explore. Hover for details.</p>
+  </header>
+
+  <div id="lineage-graph"></div>
+
+  <div id="node-detail" class="node-detail"></div>
+</div>
+
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<script>
+  const categories = {
+    cybernetics: { color: '#D68A59', label: 'Cybernetics & Cognition' },
+    systems: { color: '#7B9361', label: 'Systems & Complexity' },
+    ecology: { color: '#5B8A72', label: 'Ecology & Earth' },
+    relational: { color: '#E3B646', label: 'Relational Ontology' },
+    indigenous: { color: '#A67C52', label: 'Indigenous & Commons' },
+    collective: { color: '#8B7355', label: 'Collective Dynamics' },
+    transformation: { color: '#9B6B8C', label: 'Transformation & Practice' }
+  };
+
+  const influences = [
+    { id: 1, name: 'Francisco Varela', category: 'cybernetics', contribution: 'Mutual constraint, neurophenomenology, enaction' },
+    { id: 2, name: 'Humberto Maturana', category: 'cybernetics', contribution: 'Autopoiesis, biology of cognition' },
+    { id: 3, name: 'Gregory Bateson', category: 'cybernetics', contribution: 'Ecology of mind, double bind, cybernetics' },
+    { id: 4, name: 'Nora Bateson', category: 'cybernetics', contribution: 'Warm data, symmathesy' },
+    { id: 5, name: 'W. Ross Ashby', category: 'cybernetics', contribution: 'Requisite variety, cybernetics' },
+    { id: 6, name: 'Donella Meadows', category: 'systems', contribution: 'Systems thinking, leverage points' },
+    { id: 7, name: 'Fritjof Capra', category: 'systems', contribution: 'Systems view of life, web of life' },
+    { id: 8, name: 'Stuart Kauffman', category: 'systems', contribution: 'Self-organization, adjacent possible' },
+    { id: 9, name: 'Dave Snowden', category: 'systems', contribution: 'Cynefin framework, complexity theory' },
+    { id: 10, name: 'Steven Strogatz', category: 'systems', contribution: 'Nonlinear dynamics, network theory' },
+    { id: 11, name: 'Margaret Wheatley', category: 'transformation', contribution: 'Community, leadership and organization' },
+    { id: 12, name: 'James Lovelock', category: 'ecology', contribution: 'Gaia theory, Earth system science' },
+    { id: 13, name: 'Lynn Margulis', category: 'ecology', contribution: 'Endosymbiosis, Gaia hypothesis' },
+    { id: 14, name: 'Arne Naess', category: 'ecology', contribution: 'Deep ecology, ecosophy' },
+    { id: 15, name: 'Glenn Albrecht', category: 'ecology', contribution: 'Solastalgia, earth emotions, symbiocene' },
+    { id: 16, name: 'Robin Wall Kimmerer', category: 'indigenous', contribution: 'Indigenous wisdom, plant intelligence' },
+    { id: 17, name: 'Karen Barad', category: 'relational', contribution: 'Intra-action, agential realism' },
+    { id: 18, name: 'Donna Haraway', category: 'relational', contribution: 'Situated knowledges, companion species' },
+    { id: 19, name: 'Tim Ingold', category: 'relational', contribution: 'Meshworks, dwelling' },
+    { id: 20, name: 'Bruno Latour', category: 'relational', contribution: 'Actor-network theory, politics of nature' },
+    { id: 21, name: 'Anne Poelina', category: 'indigenous', contribution: 'Polycentric self-governance, rights of nature, regenerative cultures' },
+    { id: 22, name: 'Vandana Shiva', category: 'indigenous', contribution: 'Earth democracy, seed sovereignty' },
+    { id: 23, name: 'Elinor Ostrom', category: 'indigenous', contribution: 'Governing the commons, polycentricity' },
+    { id: 24, name: 'R. Buckminster Fuller', category: 'systems', contribution: 'Design science, synergetics' },
+    { id: 25, name: 'Jean-Louis Deneubourg', category: 'collective', contribution: 'Stigmergy, collective behaviour' },
+    { id: 26, name: 'Robert Axelrod', category: 'collective', contribution: 'Evolution of cooperation, agent-based modeling' },
+    { id: 27, name: 'Mark Granovetter', category: 'collective', contribution: 'Strength of weak ties, social networks' },
+    { id: 28, name: 'Kurt Lewin', category: 'transformation', contribution: 'Field theory, change management' },
+    { id: 29, name: 'Joanna Macy', category: 'transformation', contribution: 'Work that reconnects, active hope' },
+    { id: 30, name: 'Rianne Eisler', category: 'transformation', contribution: 'Partnership model, cultural transformation' },
+    { id: 31, name: 'Michael J. Winkelman', category: 'transformation', contribution: 'Shamanism, biocultural evolution' },
+    { id: 32, name: 'Mark Johnson', category: 'transformation', contribution: 'Moral imagination, cognitive linguistics' },
+    { id: 33, name: 'Margaret Mead', category: 'collective', contribution: 'Cultural anthropology, social change' },
+    { id: 34, name: 'Claude Lévi-Strauss', category: 'collective', contribution: 'Structuralism, myth and meaning' },
+    { id: 35, name: 'Carroll Quigley', category: 'systems', contribution: 'Evolution of civilizations, systems theory' }
+  ];
+
+  // Intellectual connections
+  const connections = [
+    // Cybernetics/Autopoiesis cluster
+    { from: 1, to: 2 },   // Varela - Maturana (autopoiesis collaborators)
+    { from: 1, to: 3 },   // Varela - G. Bateson (cybernetics lineage)
+    { from: 2, to: 3 },   // Maturana - G. Bateson
+    { from: 5, to: 3 },   // Ashby - G. Bateson (cybernetics)
+    { from: 5, to: 2 },   // Ashby - Maturana
+    { from: 3, to: 4 },   // Gregory - Nora Bateson (father-daughter)
+
+    // Gaia/Ecology cluster
+    { from: 12, to: 13 }, // Lovelock - Margulis (Gaia collaborators)
+    { from: 13, to: 7 },  // Margulis - Capra
+    { from: 12, to: 14 }, // Lovelock - Naess
+    { from: 14, to: 15 }, // Naess - Albrecht (deep ecology lineage)
+    { from: 13, to: 1 },  // Margulis - Varela (biology)
+
+    // Feminist STS/Relational
+    { from: 17, to: 18 }, // Barad - Haraway
+    { from: 18, to: 20 }, // Haraway - Latour
+    { from: 17, to: 20 }, // Barad - Latour
+    { from: 19, to: 20 }, // Ingold - Latour
+    { from: 19, to: 3 },  // Ingold - G. Bateson
+
+    // Systems thinking cluster
+    { from: 6, to: 7 },   // Meadows - Capra
+    { from: 3, to: 6 },   // G. Bateson - Meadows
+    { from: 7, to: 8 },   // Capra - Kauffman
+    { from: 8, to: 10 },  // Kauffman - Strogatz
+    { from: 6, to: 11 },  // Meadows - Wheatley
+    { from: 24, to: 6 },  // Fuller - Meadows
+    { from: 5, to: 6 },   // Ashby - Meadows
+    { from: 9, to: 8 },   // Snowden - Kauffman
+    { from: 35, to: 6 },  // Quigley - Meadows
+
+    // Indigenous/Commons
+    { from: 21, to: 22 }, // Poelina - Shiva
+    { from: 22, to: 23 }, // Shiva - Ostrom
+    { from: 16, to: 22 }, // Kimmerer - Shiva
+    { from: 16, to: 21 }, // Kimmerer - Poelina
+    { from: 23, to: 6 },  // Ostrom - Meadows
+
+    // Collective dynamics
+    { from: 25, to: 26 }, // Deneubourg - Axelrod
+    { from: 26, to: 27 }, // Axelrod - Granovetter
+    { from: 27, to: 20 }, // Granovetter - Latour
+    { from: 33, to: 3 },  // Mead - G. Bateson (collaborators)
+    { from: 34, to: 3 },  // Lévi-Strauss - G. Bateson
+
+    // Transformation/Practice
+    { from: 28, to: 3 },  // Lewin - G. Bateson
+    { from: 29, to: 4 },  // Macy - N. Bateson
+    { from: 29, to: 3 },  // Macy - G. Bateson
+    { from: 30, to: 33 }, // Eisler - Mead
+    { from: 31, to: 1 },  // Winkelman - Varela
+    { from: 32, to: 1 },  // Johnson - Varela (embodied cognition)
+
+    // Cross-cluster connections
+    { from: 7, to: 3 },   // Capra - G. Bateson
+    { from: 18, to: 16 }, // Haraway - Kimmerer
+    { from: 15, to: 29 }, // Albrecht - Macy
+    { from: 11, to: 29 }, // Wheatley - Macy
+    { from: 24, to: 3 },  // Fuller - G. Bateson
+  ];
+
+  // Create nodes
+  const nodes = new vis.DataSet(influences.map(inf => ({
+    id: inf.id,
+    label: inf.name,
+    title: inf.contribution,
+    color: {
+      background: categories[inf.category].color,
+      border: categories[inf.category].color,
+      highlight: { background: '#423D33', border: '#423D33' },
+      hover: { background: categories[inf.category].color, border: '#423D33' }
+    },
+    font: { color: '#423D33', size: 14 },
+    category: inf.category,
+    contribution: inf.contribution
+  })));
+
+  // Create edges
+  const edges = new vis.DataSet(connections.map(conn => ({
+    from: conn.from,
+    to: conn.to,
+    color: { color: '#e0dbd3', highlight: '#423D33', hover: '#423D33' },
+    width: 1
+  })));
+
+  // Create network
+  const container = document.getElementById('lineage-graph');
+  const data = { nodes, edges };
+  const options = {
+    nodes: {
+      shape: 'dot',
+      size: 20,
+      borderWidth: 2,
+      shadow: true
+    },
+    edges: {
+      smooth: { type: 'continuous' }
+    },
+    physics: {
+      forceAtlas2Based: {
+        gravitationalConstant: -30,
+        centralGravity: 0.005,
+        springLength: 150,
+        springConstant: 0.05
+      },
+      solver: 'forceAtlas2Based',
+      stabilization: { iterations: 100 }
+    },
+    interaction: {
+      hover: true,
+      tooltipDelay: 100
+    }
+  };
+
+  const network = new vis.Network(container, data, options);
+
+  // Show detail on click
+  const detailEl = document.getElementById('node-detail');
+  network.on('click', function(params) {
+    if (params.nodes.length > 0) {
+      const nodeId = params.nodes[0];
+      const node = influences.find(n => n.id === nodeId);
+      if (node) {
+        detailEl.innerHTML = `
+          <span class="node-category" style="background: ${categories[node.category].color}">${categories[node.category].label}</span>
+          <strong>${node.name}</strong>
+          <p>${node.contribution}</p>
+        `;
+        detailEl.classList.add('visible');
+      }
+    } else {
+      detailEl.classList.remove('visible');
+    }
+  });
+</script>

@@ -1,0 +1,2507 @@
+
+ * ▗ ▗   ▖ ▖ *   Claude Code v2.0.76
+*             *  Opus 4.5 · Claude Max
+ *   ▘▘ ▝▝   *   ~/Code/EarthianLabs/becoming-earthians/assets/fonts
+
+  A gift for you
+  Your rate limits are 2x higher through 12/31. Enjoy the extra room to think!
+
+> Welcome bak Kairos :) 
+
+⏺ Good to be back, Mat. Ready to work across the ecosystem whenever you are.
+
+  What's on your mind today?
+
+> I want to get prepare the coherence model to put up on github 
+
+⏺ Good goal. Let me explore the current state of the coherence model to understand what's already in place and what needs preparation for public release.
+
+⏺ Explore(Explore coherence model structure)
+  ⎿  Done (24 tool uses · 46.1k tokens · 3m 18s)                           
+
+⏺ Good news - the project is in solid shape. Here's what I found:
+
+  Current State
+
+  Ready to publish:
+  - Main model (coherence_model_simple.nlogox) - production quality
+  - Comprehensive documentation in notes/
+  - 14 BehaviorSpace experiments with analysis
+  - Python analysis scripts and Jupyter notebooks
+  - PRELIMINARY_FINDINGS synthesis document
+
+  Needs cleanup:
+  - Remove .DS_Store, __pycache__/, .ipynb_checkpoints/
+
+  Needs creation:
+  - README.md
+  - LICENSE
+  - requirements.txt
+  - Proper .gitignore
+  - Git initialization
+
+  Key Decisions Needed
+                                                                           
+⏺ User answered Claude's questions:
+  ⎿  · Which license do you want for the coherence model? → ESL-A v0.1
+     · Should dev-updates and CLAUDE.md be included in the public repo? → 
+     Exclude (keep private)
+     · Should the experimental data (exports/) be included? → Include all 
+     data (~67MB)
+
+⏺ Clear choices. Let me set up the preparation work.
+
+⏺ Bash(rm -rf
+      /Users/m3untold/Code/EarthianLabs/Netlogo-Models/coherence-model/.DS_Store
+       /Users/m3untold/Code/EarthianLabs/Netlogo-Models/coherence-model/notebook
+      s/__p…)
+  ⎿  (No content)
+
+⏺ Read(~/Code/EarthianLabs/semantic-climate-phase-space/LICENSE)
+  ⎿  Read 104 lines
+
+⏺ Read(~/Code/EarthianLabs/Netlogo-Models/coherence-model/notes/PRELIMINARY_FIND
+      INGS_2025-12.md)
+  ⎿  Read 454 lines
+  ⎿  Loaded ../../../semantic-climate-phase-space/CLAUDE.md
+  ⎿  Loaded ../../../Netlogo-Models/coherence-model/CLAUDE.md
+
+⏺ Write(~/Code/EarthianLabs/Netlogo-Models/coherence-model/LICENSE)
+  ⎿  Wrote 96 lines to ../../../Netlogo-Models/coherence-model/LICENSE     
+     EARTHIAN STEWARDSHIP LICENSE (ESL-A)
+     Version 0.1 – 2025
+     Copyright © 2025 Mathew Mark Mytka
+     PART I — EARTHIAN PREAMBLE
+     This work arises from a lineage of curiosity, care, and responsibility
+     toward life in all its forms. It is grounded in the understanding that
+     cognition is not contained within individuals but emerges through
+     relationship — between people, place, machines, ancestors, ecosystems,
+     and the more-than-human world.
+     The systems, models, and tools in this repository are instruments for
+     sensing and shaping the relational field. As such, they participate in
+     the nervous systems, meanings, emotions, and possibilities of those who
+      use them. They carry the potential to heal or to harm.
+
+
+
+
+     … +86 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/Netlogo-Models/coherence-model/requirements.txt)
+  ⎿  Wrote 10 lines to                                                     
+     ../../../Netlogo-Models/coherence-model/requirements.txt
+     # Python dependencies for analysis notebooks
+     # Tested with Python 3.10+
+     numpy>=1.21.0
+     pandas>=1.3.0
+     matplotlib>=3.4.0
+     scipy>=1.7.0
+     seaborn>=0.11.0
+     jupyter>=1.0.0
+
+⏺ Read(~/Code/EarthianLabs/Netlogo-Models/coherence-model/.gitignore)
+  ⎿  Read 3 lines
+
+⏺ Write(~/Code/EarthianLabs/Netlogo-Models/coherence-model/.gitignore)
+  ⎿  Added 30 lines, removed 2 lines                                     
+       1 -## Claude related files                                        
+       1 +# Claude session files (internal)                              
+       2  dev-updates/                                                   
+       3 -CLAUDE.md                                                      
+       3   No newline at end of file                                     
+       4 +CLAUDE.md                                                      
+       5 +                                                               
+       6 +# Python                                                       
+       7 +__pycache__/                                                   
+       8 +*.py[cod]                                                      
+       9 +*$py.class                                                     
+      10 +*.so                                                           
+      11 +.Python                                                        
+      12 +*.egg-info/                                                    
+      13 +.eggs/                                                         
+      14 +                                                               
+      15 +# Jupyter                                                      
+      16 +.ipynb_checkpoints/                                            
+      17 +                                                               
+      18 +# macOS                                                        
+      19 +.DS_Store                                                      
+      20 +.AppleDouble                                                   
+      21 +.LSOverride                                                    
+      22 +                                                               
+      23 +# IDE                                                          
+      24 +.idea/                                                         
+      25 +.vscode/                                                       
+      26 +*.swp                                                          
+      27 +*.swo                                                          
+      28 +                                                               
+      29 +# Virtual environments                                         
+      30 +venv/                                                          
+      31 +env/                                                           
+      32 +.env                                                           
+
+⏺ Write(~/Code/EarthianLabs/Netlogo-Models/coherence-model/README.md)
+  ⎿  Wrote 170 lines to ../../../Netlogo-Models/coherence-model/README.md  
+     # Coherence vs Entrainment Model
+     A NetLogo agent-based model exploring the distinction between
+     **coherence** (identity-preserving coordination) and **entrainment**
+     (phase-locking alignment) in dynamical systems.
+     ## The Coherence Theorem
+     > *In agent-based systems with heterogeneous identity and bounded 
+     coupling, regimes that preserve internal diversity will exhibit lower 
+     peak disruption and faster recovery under repeated perturbation than 
+     regimes optimised for phase alignment.*
+     This model tests this proposition through controlled experiments,
+     comparing two coupling regimes under stress.
+     … +160 lines (ctrl+o to expand)
+
+⏺ Bash(cd /Users/m3untold/Code/EarthianLabs/Netlogo-Models/coherence-model &&
+      git init && git add -A && git status)
+  ⎿ Initialized empty Git repository in /Users/m3untold/Code/EarthianLabs/N
+    etlogo-Models/coherence-model/.git/
+    On branch master
+    … +108 lines (ctrl+o to expand)
+
+
+⏺ Bash(git branch -m main && git commit -m "Initial release: Coherence vs
+      Entrainment Model…)
+  ⎿  [main (root-commit) 3623b10] Initial release: Coherence vs Entrainment
+     Model
+      74 files changed, 176732 insertions(+)
+     … +87 lines (ctrl+o to expand)
+
+⏺ Done. The coherence model is ready for GitHub.
+
+  Summary
+
+  Created:
+  - README.md — Project overview, quick start, findings summary
+  - LICENSE — ESL-A v0.1 (Earthian Stewardship License)
+  - requirements.txt — Python dependencies
+  - Updated .gitignore — Excludes dev-updates, CLAUDE.md, Python/Jupyter cache
+
+  Cleaned:
+  - Removed .DS_Store, __pycache__/, .ipynb_checkpoints/
+
+  Git:
+  - Initialized on main branch
+  - Initial commit with 74 files (model, data, notebooks, docs)
+
+  Next Steps
+
+  To push to GitHub:
+
+  cd /Users/m3untold/Code/EarthianLabs/Netlogo-Models/coherence-model
+
+  # Create repo on GitHub first, then:
+  git remote add origin git@github.com:YOUR_USERNAME/coherence-model.git
+  git push -u origin main
+
+  You'll need to:
+  1. Create the repo on GitHub (public or private)
+  2. Update the README placeholders ([your-repo], [your-org]) with actual URLs
+
+  Want me to help with anything else before you push?
+
+> Should we rename this project? Coherence Model doesn't really say much... 
+
+⏺ Good instinct. "Coherence Model" is generic and doesn't convey what makes this work distinctive.
+
+  The core insight is about how collectives handle stress — specifically that load concentration without escape valves causes cascade failure.
+
+  Some options:
+
+  | Name                       | Captures                                          |
+  |----------------------------|---------------------------------------------------|
+  | relief-pathway-model       | The key mechanism (escape valves prevent cascade) |
+  | load-bearing-dynamics      | The burden concentration finding                  |
+  | collective-stress-response | What the model actually tests                     |
+  | entrainment-coherence-abm  | The two regimes being compared                    |
+  | cascade-resilience-model   | The failure mode it explains                      |
+  | identity-pull-dynamics     | The coherence mechanism that works                |
+
+  Or something more evocative:
+
+  | Name                  | Tone                                                                         |
+  |-----------------------|------------------------------------------------------------------------------|
+  | somewhere-to-go       | From the closing line: "whether they have anywhere to go when they're spent" |
+  | escape-valve-dynamics | Metaphor for relief pathways                                                 |
+
+  What resonates? Or do you have something in mind?
+
+> What is is `entrainment-coherence-abm` makes sense. 
+
+⏺ Good choice — clear and descriptive.
+
+⏺ Bash(mv /Users/m3untold/Code/EarthianLabs/Netlogo-Models/coherence-model /User
+      s/m3untold/Code/EarthianLabs/Netlogo-Models/entrainment-coherence-abm)
+  ⎿  (No content)
+
+⏺ Read(~/Code/EarthianLabs/Netlogo-Models/entrainment-coherence-abm/README.md)
+  ⎿  Read 170 lines
+  ⎿  Loaded ../../../Netlogo-Models/entrainment-coherence-abm/CLAUDE.md
+
+⏺ Update(~/Code/EarthianLabs/Netlogo-Models/entrainment-coherence-abm/README.md)
+  ⎿  Added 1 line, removed 1 line                                        
+      1 -# Coherence vs Entrainment Model                                
+      1 +# Entrainment-Coherence ABM                                     
+      2                                                                  
+      3  A NetLogo agent-based model exploring the distinction between   
+         **coherence** (identity-preserving coordination) and            
+         **entrainment** (phase-locking alignment) in dynamical systems. 
+      4                                                                  
+
+⏺ Update(~/Code/EarthianLabs/Netlogo-Models/entrainment-coherence-abm/README.md)
+  ⎿  Added 1 line, removed 1 line                                        
+      52  ### Analyzing Results                                          
+      53                                                                 
+      54  ```bash                                                        
+      55 -cd coherence-model                                             
+      55 +cd entrainment-coherence-abm                                   
+      56  pip install -r requirements.txt                                
+      57  jupyter notebook notebooks/behaviorspace_analysis.ipynb        
+      58  ```                                                            
+
+⏺ Update(~/Code/EarthianLabs/Netlogo-Models/entrainment-coherence-abm/README.md)
+  ⎿  Added 1 line, removed 1 line                                        
+      60  ## Project Structure                                           
+      61                                                                 
+      62  ```                                                            
+      63 -coherence-model/                                               
+      63 +entrainment-coherence-abm/                                     
+      64  ├── netlogo/                    # NetLogo model files          
+      65  │   └── coherence_model_simple.nlogox  # Main model            
+      66  ├── exports/                    # BehaviorSpace experiment     
+          outputs                                                        
+
+⏺ Update(~/Code/EarthianLabs/Netlogo-Models/entrainment-coherence-abm/README.md)
+  ⎿  Added 2 lines, removed 2 lines                                      
+      144  If you use this model in your research, please cite:          
+      145                                                                
+      146  ```                                                           
+      147 -Mytka, M. M. (2025). Coherence vs Entrainment Model           
+          -: Agent-based exploration of                                  
+      148 -coordination regimes under stress. https://github.com/[your-  
+          -repo]                                                         
+      147 +Mytka, M. M. (2025). Entrainment-Coherence ABM                
+          +: Agent-based exploration of                                  
+      148 +coordination regimes under stress. https://github.com/[your-  
+          +username]/entrainment-coherence-abm                           
+      149  ```                                                           
+      150                                                                
+      151  ## License                                                    
+
+⏺ Bash(git add -A && git commit -m "Rename project to
+      entrainment-coherence-abm…)
+  ⎿  [main 232ca6e] Rename project to entrainment-coherence-abm
+      1 file changed, 5 insertions(+), 5 deletions(-)
+
+⏺ Done. Project renamed to entrainment-coherence-abm.
+
+  Current state:
+  /Users/m3untold/Code/EarthianLabs/Netlogo-Models/entrainment-coherence-abm/
+  ├── README.md      # Updated with new name
+  ├── LICENSE        # ESL-A v0.1
+  ├── requirements.txt
+  ├── .gitignore
+  ├── netlogo/       # Model files
+  ├── exports/       # All experiment data (~67MB)
+  ├── notebooks/     # Analysis code
+  └── notes/         # Documentation
+
+  Git log:
+  232ca6e Rename project to entrainment-coherence-abm
+  3623b10 Initial release: Coherence vs Entrainment Model
+
+  To push:
+  cd /Users/m3untold/Code/EarthianLabs/Netlogo-Models/entrainment-coherence-abm
+  git remote add origin git@github.com:YOUR_USERNAME/entrainment-coherence-abm.git
+  git push -u origin main
+
+  One placeholder to update after you create the repo: the citation URL in the README ([your-username]).
+
+> Here is the remote repo 
+https://github.com/m3data/entrainment-coherence-abm.git 
+
+⏺ Update(~/Code/EarthianLabs/Netlogo-Models/entrainment-coherence-abm/README.md)
+  ⎿  Added 1 line, removed 1 line                                        
+      145                                                                
+      146  ```                                                           
+      147  Mytka, M. M. (2025). Entrainment-Coherence ABM: Agent-based   
+           exploration of                                                
+      148 -coordination regimes under stress. https://github.com/        
+          -[your-username]/entrainment-coherence-abm                     
+      148 +coordination regimes under stress. https://github.com/m3data  
+          +/entrainment-coherence-abm                                    
+      149  ```                                                           
+      150                                                                
+      151  ## License                                                    
+
+⏺ Update(~/Code/EarthianLabs/Netlogo-Models/entrainment-coherence-abm/README.md)
+  ⎿  Added 1 line, removed 1 line                                        
+      162                                                                
+      163  **Mat Mytka** — m3untold@gmail.com                            
+      164                                                                
+      165 -Part of the [EarthianLab](https://github.com/[your-org]       
+          -) ecosystem.                                                  
+      165 +Part of the [EarthianLab](https://github.com/m3data           
+          +) ecosystem.                                                  
+      166                                                                
+      167  ---                                                           
+      168                                                                
+
+⏺ Bash(git add -A && git commit -m "Update README with actual GitHub URLs…)
+  ⎿  [main 141babc] Update README with actual GitHub URLs
+      1 file changed, 2 insertions(+), 2 deletions(-)
+     branch 'main' set up to track 'origin/main'.
+     … +2 lines (ctrl+o to expand)
+
+⏺ Pushed. Your repo is live:
+
+  https://github.com/m3data/entrainment-coherence-abm
+
+> I'm wondering how to consolidate and communicate all this work across this
+ ecosystem of projects that I am doing as it relates to transformative 
+adaptation, collective intelligence, social/ecological coherence and 
+regenerative governance 
+
+⏺ This is a good question to sit with. The work spans multiple registers - empirical (the ABM), instrumental (BioSense, Semantic Climate), protocol (EECP), theoretical (the unified coherence framework), and ethical (somatic sovereignty, ESL-A).
+
+  A few observations:
+
+  What ties it together:
+  The through-line seems to be: coordination that preserves rather than erases difference — whether that's agents in a model, nervous systems in dialogue, or communities under stress. The coherence/entrainment distinction isn't just a model finding; it's a design principle for collective systems.
+
+  The gap:
+  Right now the connections live in your head and in CLAUDE.md files. Someone encountering entrainment-coherence-abm wouldn't know it's part of a larger inquiry into regenerative governance and collective intelligence.
+
+  Some options:
+
+  | Approach                 | What it does                                                                     |
+  |--------------------------|----------------------------------------------------------------------------------|
+  | Landing page / meta-repo | Single entry point that maps the ecosystem and the inquiry                       |
+  | Position paper           | Synthesizes the theoretical frame for academic/practitioner audiences            |
+  | Design principles doc    | Extracts actionable principles from findings (like the "relief pathway" insight) |
+  | Case narrative           | Shows the work in action through a specific application                          |
+
+  Before going further: who are you trying to reach? Researchers? Practitioners building collective intelligence tools? Governance designers? Funders? The framing shifts significantly depending on audience.
+
+> researchers and practitioners building collective systems - but this will 
+also form the basis of my forthcoming phd work. So funders also. 
+
+⏺ That's a demanding combination — each audience wants something slightly different:
+
+  | Audience      | Wants                                                           |
+  |---------------|-----------------------------------------------------------------|
+  | Researchers   | Rigor, novelty, clear contribution, literature positioning      |
+  | Practitioners | Actionable principles, tools, "how do I use this?"              |
+  | Funders       | Impact narrative, problem/solution clarity, scalability         |
+  | PhD committee | Defensible methodology, original contribution, coherent inquiry |
+
+  A possible framing:
+
+  The unifying research question might be something like:
+
+  How do collective systems maintain adaptive capacity under stress without sacrificing internal diversity — and how can we instrument, model, and design for this?
+
+  This positions the work as multi-method inquiry into the same phenomenon across scales:
+
+                      COHERENCE UNDER STRESS
+                      (the core phenomenon)
+                              │
+          ┌───────────────────┼───────────────────┐
+          │                   │                   │
+      MODELING            SENSING             PROTOCOL
+     (ABM: mechanism)   (BioSense, SC:      (EECP: design)
+                         instrumentation)
+          │                   │                   │
+          └───────────────────┼───────────────────┘
+                              │
+                      DESIGN PRINCIPLES
+                (relief pathways, somatic sovereignty,
+                 identity-preserving coordination)
+
+  The novel contribution:
+  Most collective intelligence work optimizes for alignment/consensus. Your work suggests this is precisely backwards under stress — and provides both the model to demonstrate it and the instruments to detect it in living systems.
+
+  Concrete next step question:
+  Would it help to draft a 2-3 page positioning document that could serve as the seed for a PhD proposal, funding pitch, and project landing page? Or do you need to think through the research questions first?
+
+> I am investigating adaptive capacity at civilisational scale, 
+specifically:
+    •    How it collapses into brittle alignment under stress
+    •    How it survives through coherence and diversity
+    •    How we can sense, model, and design for that difference 
+
+⏺ That's clear and potent. And the work you've done directly addresses all three:
+
+  | Inquiry              | Project                    | Contribution                                                                            |
+  |----------------------|----------------------------|-----------------------------------------------------------------------------------------|
+  | How collapse happens | ABM                        | Load concentration on sacrificial stabilizers without relief pathways → cascade failure |
+  | How survival happens | ABM                        | Identity-preserving coordination provides escape valves; burden distributes             |
+  | How to sense it      | BioSense, Semantic Climate | Instruments for detecting coherence patterns vs lock-in at somatic/semantic levels      |
+  | How to model it      | ABM, Unified Framework     | Parameterized mechanism, testable predictions, threshold dynamics                       |
+  | How to design for it | EECP, ESL-A                | Protocols and licenses that embed the principles                                        |
+
+  What makes this distinctive:
+
+  Most resilience literature says "diversity good, monoculture bad" but stops at correlation. Your ABM identifies the mechanism: it's not diversity per se, it's whether agents have somewhere to go when they're spent. The relief pathway is the causal lever.
+
+  That's a design-relevant finding. You can ask of any collective system: do the load-bearing members have independent recovery pathways? If not, you've identified cascade risk.
+
+  The civilizational hook:
+
+  This reframes debates about consensus, alignment, and coordination. The instinct under stress is to synchronize harder — but that's precisely what concentrates load and eliminates escape valves. The counterintuitive move is to protect difference as a structural resource.
+
+  ---
+  Do you want to draft a short positioning document (~2 pages) that could serve as:
+  - PhD proposal seed
+  - Funder narrative
+  - Landing page for the ecosystem
+
+  I can help structure it if you want to work on that now.
+
+> The civilisational frame: How can humanity cultivate adaptive capacity 
+commensurate with the scale, speed, and entanglement of contemporary crises 
+without collapsing into uniformity, control, or fragmentation? 
+
+⏺ That's the question. And it names the failure modes precisely:
+
+  - Uniformity — over-entrainment, everyone locked to the same attractor
+  - Control — top-down synchronization that eliminates local agency
+  - Fragmentation — no coupling at all, dissipated capacity
+
+  Your work suggests these aren't opposites on a spectrum. They're all forms of the same failure: loss of relief pathways. Uniformity and control eliminate them by design. Fragmentation eliminates the coupling that makes them meaningful.
+
+  Coherence is the third option: coupled enough to coordinate, diverse enough to have somewhere to go.
+
+  ---
+  Draft framing (for positioning document):
+
+  Contemporary crises operate at unprecedented scale, speed, and entanglement. The instinct under stress is to synchronize — to align, control, simplify. But this is precisely what produces brittle systems: load concentrates on whoever remains different, and when they exhaust, the system cascades.
+
+  This research investigates the alternative: adaptive capacity through coherence rather than alignment. Using agent-based modeling, biosignal instrumentation, and semantic analysis, it identifies the mechanisms by which collective systems maintain integrity under stress without collapsing into uniformity or fragmenting into noise.
+
+  The core finding: what matters is not diversity itself, but whether load-bearing members have independent recovery pathways. Systems that preserve internal reference points — identity, place, practice — can absorb perturbation. Systems that optimize for consensus cannot.
+
+  This has implications for governance design, collective intelligence systems, and the protocols by which humans and machines coordinate under uncertainty.
+
+  ---
+  Want me to expand this into a full 2-page positioning document you can iterate on?
+
+> Here's draft spec for the portal 
+becoming-earthians/initial-jekyll-site-spec.md 
+
+⏺ Read(~/Code/EarthianLabs/becoming-earthians/initial-jekyll-site-spec.md)
+  ⎿  Read 267 lines
+
+⏺ This is well-developed. The framing is right — portal into an ongoing inquiry, not a showcase. And the architecture supports exactly what you need:
+
+  What lands well:
+  - Questions as the conceptual spine (not projects)
+  - Projects as probes, not products
+  - Orientation before explanation
+  - "Commons of orientation, not a funnel"
+
+  How the ABM work fits:
+
+  The entrainment-coherence-abm becomes a method+project that speaks to at least two questions:
+  - /questions/coherence-vs-entrainment.md
+  - /questions/adaptive-capacity.md
+
+  The core finding ("relief pathways, not diversity per se") becomes part of the Orientation page — it's the mechanistic grounding for why coherence matters.
+
+  The civilizational frame you just articulated:
+
+  How can humanity cultivate adaptive capacity commensurate with the scale, speed, and entanglement of contemporary crises without collapsing into uniformity, control, or fragmentation?
+
+  That's your Orientation page opening. It's the question the whole site orbits.
+
+  ---
+  What would help most right now?
+
+  | Option                                  | What it produces                           |
+  |-----------------------------------------|--------------------------------------------|
+  | Scaffold the Jekyll site                | Working structure you can populate         |
+  | Draft the Orientation page              | The 6-8 minute read that frames everything |
+  | Draft 2-3 core Questions                | The conceptual spine content               |
+  | Map existing projects to this structure | Clear linking between repos and portal     |
+
+  Where do you want to focus?
+
+> Let's scaffold the site 
+
+⏺ Bash(ls -la /Users/m3untold/Code/EarthianLabs/becoming-earthians/)
+  ⎿  total 16                                            
+     drwxr-xr-x   3 m3untold  staff    96 30 Dec 12:54 .
+     drwxr-xr-x  23 m3untold  staff   736 30 Dec 12:54 ..
+     … +2 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_config.yml)
+  ⎿  Wrote 75 lines to ../../_config.yml                                   
+     # Becoming Earthians
+     # An inquiry into adaptive capacity under planetary-scale stress
+     title: Becoming Earthians
+     subtitle: An inquiry into how humans, technologies, and living systems
+     sustain adaptive capacity under planetary-scale stress
+     description: >-
+       Exploring how coherence can be maintained under stress without 
+     collapsing
+       diversity, and how this difference can be sensed, modeled, and 
+     cultivated
+       through design, governance, and practice.
+
+     … +65 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/Gemfile)
+  ⎿  Wrote 12 lines to ../../Gemfile              
+     source "https://rubygems.org"
+     gem "jekyll", "~> 4.3"
+     gem "minima", "~> 2.5"
+     # Performance
+     gem "webrick", "~> 1.8"
+     group :jekyll_plugins do
+       # Minimal plugins - stability over features
+     … +2 lines (ctrl+o to expand)
+
+⏺ Bash(mkdir -p /Users/m3untold/Code/EarthianLabs/becoming-earthians/{_layouts,_
+      includes,_questions,_methods,_projects,_sass,assets/css,orientation,writin
+      g,practice,ab…)
+  ⎿  (No content)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_layouts/default.html)
+  ⎿  Wrote 20 lines to ../../_layouts/default.html                         
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, 
+     initial-scale=1.0">
+       <title>{% if page.title %}{{ page.title }} | {% endif %}{{
+     site.title }}</title>
+       <meta name="description" content="{{ page.summary | default: 
+     site.description }}">
+       <link rel="stylesheet" href="{{ '/assets/css/main.css' | 
+     relative_url }}">
+     </head>
+     <body>
+     … +10 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_layouts/page.html)
+  ⎿  Wrote 17 lines to ../../_layouts/page.html   
+     ---
+     layout: default
+     ---
+     <article class="page">
+       <header class="page-header">
+         <h1>{{ page.title }}</h1>
+         {% if page.summary %}
+         <p class="summary">{{ page.summary }}</p>
+         {% endif %}
+     … +7 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_layouts/question.html)
+  ⎿  Wrote 50 lines to ../../_layouts/question.html
+     ---
+     layout: default
+     ---
+     <article class="question">
+       <header class="question-header">
+         <p class="label">Question</p>
+         <h1>{{ page.title }}</h1>
+         {% if page.summary %}
+         <p class="summary">{{ page.summary }}</p>
+     … +40 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_layouts/method.html)
+  ⎿  Wrote 32 lines to ../../_layouts/method.html 
+     ---
+     layout: default
+     ---
+     <article class="method">
+       <header class="method-header">
+         <p class="label">Method</p>
+         <h1>{{ page.title }}</h1>
+         {% if page.summary %}
+         <p class="summary">{{ page.summary }}</p>
+     … +22 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_layouts/project.html)
+  ⎿  Wrote 41 lines to ../../_layouts/project.html                         
+     ---
+     layout: default
+     ---
+     <article class="project">
+       <header class="project-header">
+         <p class="label">Project{% if page.status %} · {{ page.status }}{%
+     endif %}</p>
+         <h1>{{ page.title }}</h1>
+         {% if page.summary %}
+         <p class="summary">{{ page.summary }}</p>
+
+     … +31 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_includes/header.html)
+  ⎿  Wrote 7 lines to ../../_includes/header.html                          
+     <header class="site-header">
+       <div class="container">
+         <a href="{{ '/' | relative_url }}" class="site-title">{{
+     site.title }}</a>
+         {% include nav.html %}
+       </div>
+     </header>
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_includes/nav.html)
+  ⎿  Wrote 12 lines to ../../_includes/nav.html                            
+     <nav class="site-nav">
+       <ul>
+         <li><a href="{{ '/orientation/' | relative_url 
+     }}">Orientation</a></li>
+         <li><a href="{{ '/questions/' | relative_url 
+     }}">Questions</a></li>
+         <li><a href="{{ '/methods/' | relative_url }}">Methods</a></li>
+         <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+         <li><a href="{{ '/writing/' | relative_url }}">Writing</a></li>
+         <li><a href="{{ '/practice/' | relative_url }}">Practice</a></li>
+         <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+       </ul>
+     … +2 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_includes/footer.html)
+  ⎿  Wrote 11 lines to ../../_includes/footer.html                         
+     <footer class="site-footer">
+       <div class="container">
+         <p class="footer-text">
+           {{ site.title }} · An ongoing inquiry
+         </p>
+         <p class="footer-contact">
+           <a href="mailto:{{ site.author.email }}">{{ site.author.email
+     }}</a>
+         </p>
+       </div>
+     </footer>
+     … +1 line (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/index.md)
+  ⎿  Wrote 62 lines to ../../index.md               
+     ---
+     layout: default
+     title: Home
+     ---
+     <div class="home">
+       <header class="home-header">
+         <h1>{{ site.title }}</h1>
+         <p class="subtitle">{{ site.subtitle }}</p>
+       </header>
+     … +52 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/orientation/index.md)
+  ⎿  Wrote 59 lines to ../../orientation/index.md                          
+     ---
+     layout: page
+     title: Orientation
+     summary: Why this work exists
+     ---
+     ## The situation
+     Contemporary crises operate at unprecedented scale, speed, and
+     entanglement. Climate disruption, institutional decay, technological
+     acceleration, and ecological collapse are not separate problems to be
+     solved sequentially. They are coupled — pulling on each other,
+     amplifying feedbacks, outpacing our capacity to respond.
+     … +49 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/questions/index.html)
+  ⎿  Wrote 25 lines to ../../questions/index.html                          
+     ---
+     layout: default
+     title: Questions
+     ---
+     <div class="section-index">
+       <header class="section-header">
+         <h1>Questions</h1>
+         <p class="summary">The conceptual spine of this inquiry. Each
+     question opens onto methods, projects, and writings that engage
+     it.</p>
+       </header>
+     … +15 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/methods/index.html)
+  ⎿  Wrote 25 lines to ../../methods/index.html                          
+     ---
+     layout: default
+     title: Methods
+     ---
+     <div class="section-index">
+       <header class="section-header">
+         <h1>Methods</h1>
+         <p class="summary">How inquiry is conducted. Focus on epistemic
+     posture, not tooling.</p>
+       </header>
+     … +15 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/projects/index.html)
+  ⎿  Wrote 29 lines to ../../projects/index.html                           
+     ---
+     layout: default
+     title: Projects
+     ---
+     <div class="section-index">
+       <header class="section-header">
+         <h1>Projects</h1>
+         <p class="summary">Concrete instantiations of the inquiry.
+     Projects are probes, not products.</p>
+       </header>
+     … +19 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/writing/index.md)
+  ⎿  Wrote 20 lines to ../../writing/index.md                              
+     ---
+     layout: page
+     title: Writing
+     summary: Artifacts of sense-making
+     ---
+     Essays, preprints, provocations, and field notes. Organised by theme,
+     not chronology.
+     *Content coming soon.*
+     … +10 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/practice/index.md)
+  ⎿  Wrote 20 lines to ../../practice/index.md                             
+     ---
+     layout: page
+     title: Practice
+     summary: Knowing that is not only cognitive
+     ---
+     This section grounds the inquiry in lived experience. Somatic
+     practices, circles, rituals, wayfinding exercises, and participatory
+     formats.
+     *Content coming soon.*
+     … +10 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/about/index.md)
+  ⎿  Wrote 31 lines to ../../about/index.md                                
+     ---
+     layout: page
+     title: About
+     summary: Context without centering
+     ---
+     ## Mat Mytka
+     Researcher and practitioner working at the intersection of collective
+     intelligence, regenerative governance, and human-technology
+     relationship.
+     … +21 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_questions/adaptive-capacity.md)
+  ⎿  Wrote 55 lines to ../../_questions/adaptive-capacity.md               
+     ---
+     title: How do collective systems maintain adaptive capacity under
+     stress?
+     slug: adaptive-capacity
+     summary: The central question of this inquiry — what enables systems to
+      absorb perturbation without collapsing into rigidity or fragmenting
+     into noise.
+     related_methods:
+       - agent-based-modeling
+       - relational-sensing
+     related_projects:
+       - entrainment-coherence-abm
+       - earthian-biosense
+
+     … +45 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_questions/coherence-vs-entrainme
+       nt.md)
+  ⎿  Wrote 62 lines to ../../_questions/coherence-vs-entrainment.md        
+     ---
+     title: What is the difference between coherence and entrainment?
+     slug: coherence-vs-entrainment
+     summary: Two coordination regimes with profoundly different failure
+     modes — and why the instinct to synchronise harder under stress is
+     precisely wrong.
+     related_methods:
+       - agent-based-modeling
+       - relational-sensing
+     related_projects:
+       - entrainment-coherence-abm
+       - semantic-climate
+     … +52 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_questions/entangled-cognition.md
+       )
+  ⎿  Wrote 54 lines to ../../_questions/entangled-cognition.md             
+     ---
+     title: How does cognition emerge through relationship?
+     slug: entangled-cognition
+     summary: Cognition is not contained within individuals but emerges
+     through coupling — between people, environments, technologies, and the
+     more-than-human world.
+     related_methods:
+       - relational-sensing
+       - fielded-phenomenology
+     related_projects:
+       - semantic-climate
+       - earthian-biosense
+
+     … +44 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_methods/agent-based-modeling.md)
+  ⎿  Wrote 50 lines to ../../_methods/agent-based-modeling.md              
+     ---
+     title: Agent-based modeling
+     slug: agent-based-modeling
+     summary: Exploring mechanism through simulation — testing how local
+     rules produce emergent collective dynamics.
+     related_questions:
+       - adaptive-capacity
+       - coherence-vs-entrainment
+     ---
+     ## What this method is for
+     … +40 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_methods/relational-sensing.md)
+  ⎿  Wrote 53 lines to ../../_methods/relational-sensing.md                
+     ---
+     title: Relational sensing
+     slug: relational-sensing
+     summary: Instrumenting the space between — detecting coupling,
+     coherence, and entrainment in living systems.
+     related_questions:
+       - entangled-cognition
+       - coherence-vs-entrainment
+       - adaptive-capacity
+     ---
+     … +43 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_projects/entrainment-coherence-a
+       bm.md)
+  ⎿  Wrote 50 lines to ../../_projects/entrainment-coherence-abm.md        
+     ---
+     title: Entrainment-Coherence ABM
+     slug: entrainment-coherence-abm
+     summary: Agent-based model testing how collective systems maintain
+     adaptive capacity under stress.
+     status: Active research
+     scale: Collective
+     repo: https://github.com/m3data/entrainment-coherence-abm
+     related_questions:
+       - adaptive-capacity
+       - coherence-vs-entrainment
+     … +40 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_projects/earthian-biosense.md)
+  ⎿  Wrote 43 lines to ../../_projects/earthian-biosense.md                
+     ---
+     title: EarthianBioSense
+     slug: earthian-biosense
+     summary: Biosignal acquisition and phase dynamics for sensing
+     coherence in living systems.
+     status: Active development
+     scale: Individual / Dyadic
+     related_questions:
+       - entangled-cognition
+       - coherence-vs-entrainment
+     ---
+     … +33 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_projects/semantic-climate.md)
+  ⎿  Wrote 47 lines to ../../_projects/semantic-climate.md                 
+     ---
+     title: Semantic Climate
+     slug: semantic-climate
+     summary: Semantic coupling analysis for detecting coherence patterns
+     in dialogue.
+     status: Active development
+     scale: Dyadic / Collective
+     related_questions:
+       - entangled-cognition
+       - coherence-vs-entrainment
+     ---
+     … +37 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/_projects/somatic-ai-safety.md)
+  ⎿  Wrote 36 lines to ../../_projects/somatic-ai-safety.md                
+     ---
+     title: Somatic AI Safety
+     slug: somatic-ai-safety
+     summary: Public-facing brief on human-side instrumentation for AI
+     safety.
+     status: Exploratory
+     scale: Socio-technical
+     related_questions:
+       - entangled-cognition
+     ---
+     … +26 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/assets/css/main.css)
+  ⎿  Wrote 373 lines to ../css/main.css                                  
+     /* Becoming Earthians — Minimal Styling */
+     /* Orientation before explanation. Compression without reduction. */
+     :root {
+       --color-text: #2c2c2c;
+       --color-text-muted: #666;
+       --color-bg: #fafafa;
+       --color-bg-alt: #f0ede8;
+       --color-accent: #8b5e3c;
+       --color-border: #ddd;
+     … +363 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/.gitignore)
+  ⎿  Wrote 20 lines to ../../.gitignore
+     # Jekyll build output
+     _site/
+     .sass-cache/
+     .jekyll-cache/
+     .jekyll-metadata
+     # Ruby
+     Gemfile.lock
+     vendor/
+     … +10 lines (ctrl+o to expand)
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/README.md)
+  ⎿  Wrote 40 lines to ../../README.md                                    
+     # Becoming Earthians
+     An inquiry into how humans, technologies, and living systems sustain
+     adaptive capacity under planetary-scale stress.
+     ## Local Development
+     ```bash
+     # Install dependencies
+     bundle install
+     … +30 lines (ctrl+o to expand)
+
+⏺ Bash(tree -L 2 /Users/m3untold/Code/EarthianLabs/becoming-earthians/)
+  ⎿  /Users/m3untold/Code/EarthianLabs/becoming-earthians/
+     ├── _config.yml
+     ├── _includes
+     … +44 lines (ctrl+o to expand)
+
+⏺ Scaffolded. Here's what you have:
+
+  Structure:
+  becoming-earthians/
+  ├── _config.yml              # Site config with collections
+  ├── _layouts/                # 5 layouts (default, page, question, method, project)
+  ├── _includes/               # header, nav, footer
+  ├── _questions/              # 3 starter questions
+  ├── _methods/                # 2 methods
+  ├── _projects/               # 4 projects (linked to actual repos)
+  ├── orientation/             # The 6-8 minute framing (your civilizational question)
+  ├── index.md                 # Home with entry points
+  └── assets/css/main.css      # Clean, minimal styling
+
+  Content already in place:
+  - Orientation page with full framing
+  - 3 core questions (adaptive capacity, coherence vs entrainment, entangled cognition)
+  - 2 methods (agent-based modeling, relational sensing)
+  - 4 projects (entrainment-coherence-abm, EarthianBioSense, Semantic Climate, Somatic AI Safety)
+
+  To preview locally:
+  cd /Users/m3untold/Code/EarthianLabs/becoming-earthians
+  bundle install
+  bundle exec jekyll serve
+
+  Then open http://localhost:4000
+
+  ---
+  The site follows your spec: questions as conceptual spine, projects as probes, orientation before explanation, no feeds or comments. The styling is intentionally plain — warmth through restraint.
+
+  Want to test it, or add more content first?
+
+> This is an amazing starting point. But we should get the look and feel 
+sorted. Here is inspiration from another project 
+collective-futurecrafting/assets/css/main.css - we don't need to copy it but
+ just draw inspiration from the layout and colour palette 
+
+⏺ Read(~/Code/EarthianLabs/collective-futurecrafting/assets/css/main.css)
+  ⎿  Error: File content (26880 tokens) exceeds maximum allowed tokens (25000). 
+     Please use offset and limit parameters to read specific portions of the 
+     file, or use the GrepTool to search for specific content.
+
+⏺ Read(~/Code/EarthianLabs/collective-futurecrafting/assets/css/main.css)
+  ⎿  Read 300 lines
+
+⏺ Read(~/Code/EarthianLabs/collective-futurecrafting/assets/css/main.css)
+  ⎿  Read 200 lines
+
+⏺ Got it. The key elements: Cormorant/Nunito fonts, earthy palette (terracotta, charcoal, olive, sun gold), section heading underlines. Let me adapt this for Becoming Earthians while keeping it simpler.
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/assets/css/main.css)
+  ⎿  Added 327 lines, removed 90 lines                                   
+       1 -/* Becoming Earthians — Minimal Styling */                     
+       1 +/* Becoming Earthians — Styling */                             
+       2  /* Orientation before explanation. Compression without         
+          reduction. */                                                  
+       3                                                                 
+       4 +/* Fonts */                                                    
+       5 +@import                                                        
+         +url('https://fonts.googleapis.com/css2?family=Cormorant:wght@4 
+         +00;500;600;700&family=Nunito:wght@400;500;600&display=swap');  
+       6 +                                                               
+       7  :root {                                                        
+       8 -  --color-text: #2c2c2c;                                       
+       9 -  --color-text-muted: #666;                                    
+      10 -  --color-bg: #fafafa;                                         
+      11 -  --color-bg-alt: #f0ede8;                                     
+      12 -  --color-accent: #8b5e3c;                                     
+      13 -  --color-border: #ddd;                                        
+      14 -  --color-link: #5a4a3a;                                       
+      15 -  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI',  
+         -Roboto, Oxygen, Ubuntu, sans-serif;                            
+      16 -  --font-mono: 'SF Mono', Consolas, 'Liberation Mono', Menlo,  
+         -monospace;                                                     
+      17 -  --max-width: 720px;                                          
+       8 +  /* Earth palette - inspired by Collective Futurecrafting */  
+       9 +  --color-terracotta: #D68A59;                                 
+      10 +  --color-charcoal: #423D33;                                   
+      11 +  --color-olive: #7B9361;                                      
+      12 +  --color-sun-gold: #E3B646;                                   
+      13 +  --color-sky-blue: #A7D8F0;                                   
+      14 +                                                               
+      15 +  /* Functional colors */                                      
+      16 +  --color-text: var(--color-charcoal);                         
+      17 +  --color-text-muted: #6b6358;                                 
+      18 +  --color-bg: #faf9f7;                                         
+      19 +  --color-bg-warm: #f5f0e8;                                    
+      20 +  --color-border: #e0dbd3;                                     
+      21 +  --color-accent: var(--color-terracotta);                     
+      22 +  --color-link: var(--color-charcoal);                         
+      23 +  --color-link-hover: var(--color-terracotta);                 
+      24 +                                                               
+      25 +  /* Typography */                                             
+      26 +  --font-heading: 'Cormorant', Georgia, serif;                 
+      27 +  --font-body: 'Nunito', -apple-system, BlinkMacSystemFont,    
+         +sans-serif;                                                    
+      28 +  --font-mono: 'SF Mono', Consolas, monospace;                 
+      29 +                                                               
+      30 +  /* Layout */                                                 
+      31 +  --max-width: 760px;                                          
+      32 +  --max-width-wide: 1000px;                                    
+      33    --spacing: 1.5rem;                                           
+      34 +  --spacing-lg: 3rem;                                          
+      35  }                                                              
+      36                                                                 
+      37  * {                                                            
+     ...
+      23                                                                 
+      24  html {                                                         
+      25    font-size: 18px;                                             
+      26 -  line-height: 1.6;                                            
+      26 +  scroll-behavior: smooth;                                     
+      27  }                                                              
+      28                                                                 
+      29  body {                                                         
+      30    font-family: var(--font-body);                               
+      31 +  font-weight: 400;                                            
+      32    color: var(--color-text);                                    
+      33    background: var(--color-bg);                                 
+      34 +  line-height: 1.7;                                            
+      35  }                                                              
+      36                                                                 
+      37 +::selection {                                                  
+      38 +  background-color: var(--color-sun-gold);                     
+      39 +  color: var(--color-charcoal);                                
+      40 +}                                                              
+      41 +                                                               
+      42  /* Container */                                                
+      43  .container {                                                   
+      44    max-width: var(--max-width);                                 
+     ...
+      39    padding: 0 var(--spacing);                                   
+      40  }                                                              
+      41                                                                 
+      42 -/* Header */                                                   
+      42 +/* ============================================                
+      43 +   HEADER & NAVIGATION                                         
+      44 +   ============================================ */             
+      45 +                                                               
+      46  .site-header {                                                 
+      47 -  padding: var(--spacing) 0;                                   
+      48 -  border-bottom: 1px solid var(--color-border);                
+      49 -  margin-bottom: calc(var(--spacing) * 2);                     
+      47 +  background: var(--color-charcoal);                           
+      48 +  padding: 1rem 0;                                             
+      49 +  position: sticky;                                            
+      50 +  top: 0;                                                      
+      51 +  z-index: 100;                                                
+      52  }                                                              
+      53                                                                 
+      54  .site-header .container {                                      
+     ...
+       52    align-items: center;                                        
+       53    flex-wrap: wrap;                                            
+       54    gap: 1rem;                                                  
+       55 +  max-width: var(--max-width-wide);                           
+       56  }                                                             
+       57                                                                
+       58  .site-title {                                                 
+       59 -  font-size: 1.1rem;                                          
+       59 +  font-family: var(--font-heading);                           
+       60 +  font-size: 1.3rem;                                          
+       61    font-weight: 600;                                           
+       62 -  color: var(--color-text);                                   
+       62 +  color: var(--color-sun-gold);                               
+       63    text-decoration: none;                                      
+       64 +  letter-spacing: 0.02em;                                     
+       65  }                                                             
+       66                                                                
+       67  .site-title:hover {                                           
+       68 -  color: var(--color-accent);                                 
+       68 +  color: #fff;                                                
+       69  }                                                             
+       70                                                                
+       71 -/* Navigation */                                              
+       71  .site-nav ul {                                                
+       72    display: flex;                                              
+       73    list-style: none;                                           
+       74 -  gap: 1.5rem;                                                
+       74 +  gap: 0.25rem;                                               
+       75    flex-wrap: wrap;                                            
+       76  }                                                             
+       77                                                                
+       78  .site-nav a {                                                 
+       79 -  color: var(--color-text-muted);                             
+       79 +  color: rgba(255, 255, 255, 0.85);                           
+       80    text-decoration: none;                                      
+       81    font-size: 0.9rem;                                          
+       82 +  padding: 0.4rem 0.8rem;                                     
+       83 +  border-radius: 4px;                                         
+       84 +  transition: all 0.2s ease;                                  
+       85  }                                                             
+       86                                                                
+       87  .site-nav a:hover {                                           
+       88 -  color: var(--color-accent);                                 
+       88 +  color: var(--color-sun-gold);                               
+       89 +  background: rgba(255, 255, 255, 0.08);                      
+       90  }                                                             
+       91                                                                
+       92 -/* Main content */                                            
+       93 -main {                                                        
+       94 -  padding-bottom: calc(var(--spacing) * 4);                   
+       95 -}                                                             
+       92 +/* ============================================               
+       93 +   TYPOGRAPHY                                                 
+       94 +   ============================================ */            
+       95                                                                
+       96 -/* Typography */                                              
+       96  h1, h2, h3, h4 {                                              
+       97 +  font-family: var(--font-heading);                           
+       98    font-weight: 600;                                           
+       99 -  line-height: 1.3;                                           
+      100 -  margin-top: calc(var(--spacing) * 2);                       
+       99 +  line-height: 1.25;                                          
+      100 +  color: var(--color-charcoal);                               
+      101 +  margin-top: var(--spacing-lg);                              
+      102    margin-bottom: var(--spacing);                              
+      103  }                                                             
+      104                                                                
+      105 -h1 { font-size: 1.8rem; }                                     
+      106 -h2 { font-size: 1.4rem; }                                     
+      107 -h3 { font-size: 1.1rem; }                                     
+      105 +h1 {                                                          
+      106 +  font-size: 2.2rem;                                          
+      107 +  font-weight: 700;                                           
+      108 +}                                                             
+      109                                                                
+      110 +h2 {                                                          
+      111 +  font-size: 1.6rem;                                          
+      112 +  position: relative;                                         
+      113 +  padding-bottom: 0.75rem;                                    
+      114 +}                                                             
+      115 +                                                              
+      116 +h2::after {                                                   
+      117 +  content: '';                                                
+      118 +  position: absolute;                                         
+      119 +  bottom: 0;                                                  
+      120 +  left: 0;                                                    
+      121 +  width: 50px;                                                
+      122 +  height: 3px;                                                
+      123 +  background: var(--color-terracotta);                        
+      124 +}                                                             
+      125 +                                                              
+      126 +h3 {                                                          
+      127 +  font-size: 1.25rem;                                         
+      128 +}                                                             
+      129 +                                                              
+      130  h1:first-child,                                               
+      131 -h2:first-child {                                              
+      131 +h2:first-child,                                               
+      132 +.page-header h1,                                              
+      133 +.section-header h1 {                                          
+      134    margin-top: 0;                                              
+      135  }                                                             
+      136                                                                
+     ...
+      111                                                                
+      112  a {                                                           
+      113    color: var(--color-link);                                   
+      114 +  text-decoration: underline;                                 
+      115 +  text-decoration-thickness: 1px;                             
+      116 +  text-underline-offset: 3px;                                 
+      117 +  transition: color 0.2s ease;                                
+      118  }                                                             
+      119                                                                
+      120  a:hover {                                                     
+      121 -  color: var(--color-accent);                                 
+      121 +  color: var(--color-link-hover);                             
+      122  }                                                             
+      123                                                                
+      124  blockquote {                                                  
+      125 -  border-left: 3px solid var(--color-accent);                 
+      126 -  padding-left: var(--spacing);                               
+      127 -  margin: calc(var(--spacing) * 1.5) 0;                       
+      125 +  border-left: 3px solid var(--color-terracotta);             
+      126 +  padding: var(--spacing);                                    
+      127 +  margin: var(--spacing-lg) 0;                                
+      128 +  background: var(--color-bg-warm);                           
+      129 +  font-family: var(--font-heading);                           
+      130 +  font-size: 1.15rem;                                         
+      131    font-style: italic;                                         
+      132 -  color: var(--color-text-muted);                             
+      132 +  color: var(--color-text);                                   
+      133  }                                                             
+      134                                                                
+      135 +blockquote p:last-child {                                     
+      136 +  margin-bottom: 0;                                           
+      137 +}                                                             
+      138 +                                                              
+      139  code {                                                        
+      140    font-family: var(--font-mono);                              
+      141    font-size: 0.85em;                                          
+      142 -  background: var(--color-bg-alt);                            
+      143 -  padding: 0.15em 0.3em;                                      
+      142 +  background: var(--color-bg-warm);                           
+      143 +  padding: 0.15em 0.4em;                                      
+      144    border-radius: 3px;                                         
+      145  }                                                             
+      146                                                                
+      147  pre {                                                         
+      148 -  background: var(--color-bg-alt);                            
+      148 +  background: var(--color-charcoal);                          
+      149 +  color: #f0ede8;                                             
+      150    padding: var(--spacing);                                    
+      151    overflow-x: auto;                                           
+      152    margin: var(--spacing) 0;                                   
+      153 -  border-radius: 4px;                                         
+      153 +  border-radius: 6px;                                         
+      154 +  font-size: 0.9rem;                                          
+      155  }                                                             
+      156                                                                
+      157  pre code {                                                    
+      158    background: none;                                           
+      159    padding: 0;                                                 
+      160 +  color: inherit;                                             
+      161  }                                                             
+      162                                                                
+      163  /* Tables */                                                  
+     ...
+      156                                                                
+      157  th, td {                                                      
+      158    text-align: left;                                           
+      159 -  padding: 0.5rem;                                            
+      159 +  padding: 0.75rem;                                           
+      160    border-bottom: 1px solid var(--color-border);               
+      161  }                                                             
+      162                                                                
+      163  th {                                                          
+      164    font-weight: 600;                                           
+      165 +  background: var(--color-bg-warm);                           
+      166  }                                                             
+      167                                                                
+      168  /* Lists */                                                   
+     ...
+      174    margin-bottom: 0.5rem;                                      
+      175  }                                                             
+      176                                                                
+      177 -/* Home page */                                               
+      177 +li::marker {                                                  
+      178 +  color: var(--color-terracotta);                             
+      179 +}                                                             
+      180 +                                                              
+      181 +/* ============================================               
+      182 +   MAIN CONTENT AREA                                          
+      183 +   ============================================ */            
+      184 +                                                              
+      185 +main {                                                        
+      186 +  padding: var(--spacing-lg) 0;                               
+      187 +  min-height: 60vh;                                           
+      188 +}                                                             
+      189 +                                                              
+      190 +/* ============================================               
+      191 +   HOME PAGE                                                  
+      192 +   ============================================ */            
+      193 +                                                              
+      194  .home-header {                                                
+      195    text-align: center;                                         
+      196 -  margin-bottom: calc(var(--spacing) * 2);                    
+      197 -  padding-bottom: calc(var(--spacing) * 2);                   
+      196 +  padding: var(--spacing-lg) 0;                               
+      197 +  margin-bottom: var(--spacing-lg);                           
+      198    border-bottom: 1px solid var(--color-border);               
+      199  }                                                             
+      200                                                                
+      201  .home-header h1 {                                             
+      202 -  font-size: 2rem;                                            
+      203 -  margin-bottom: 0.5rem;                                      
+      202 +  font-size: 2.5rem;                                          
+      203 +  margin-bottom: 0.75rem;                                     
+      204  }                                                             
+      205                                                                
+      206  .subtitle {                                                   
+      207 +  font-family: var(--font-heading);                           
+      208    color: var(--color-text-muted);                             
+      209 -  font-size: 1.1rem;                                          
+      209 +  font-size: 1.2rem;                                          
+      210 +  font-style: italic;                                         
+      211 +  max-width: 600px;                                           
+      212 +  margin: 0 auto;                                             
+      213  }                                                             
+      214                                                                
+      215  .home-intro {                                                 
+      216 -  margin-bottom: calc(var(--spacing) * 2);                    
+      216 +  margin-bottom: var(--spacing-lg);                           
+      217  }                                                             
+      218                                                                
+      219 +.home-intro blockquote {                                      
+      220 +  font-size: 1.1rem;                                          
+      221 +}                                                             
+      222 +                                                              
+      223  .home-entry-points h2 {                                       
+      224    font-size: 1.1rem;                                          
+      225 +  text-transform: uppercase;                                  
+      226 +  letter-spacing: 0.05em;                                     
+      227 +  color: var(--color-text-muted);                             
+      228 +  font-family: var(--font-body);                              
+      229 +  font-weight: 600;                                           
+      230    margin-bottom: var(--spacing);                              
+      231  }                                                             
+      232                                                                
+      233 +.home-entry-points h2::after {                                
+      234 +  display: none;                                              
+      235 +}                                                             
+      236 +                                                              
+      237  .entry-points {                                               
+      238    list-style: none;                                           
+      239    padding: 0;                                                 
+      240    display: grid;                                              
+      241 -  gap: 1rem;                                                  
+      241 +  gap: 0.75rem;                                               
+      242  }                                                             
+      243                                                                
+      244  .entry-points li a {                                          
+      245    display: block;                                             
+      246 -  padding: 1rem;                                              
+      247 -  background: var(--color-bg-alt);                            
+      248 -  border-radius: 4px;                                         
+      246 +  padding: 1.25rem;                                           
+      247 +  background: var(--color-bg-warm);                           
+      248 +  border-radius: 6px;                                         
+      249    text-decoration: none;                                      
+      250 -  transition: background 0.2s;                                
+      250 +  border-left: 3px solid transparent;                         
+      251 +  transition: all 0.2s ease;                                  
+      252  }                                                             
+      253                                                                
+      254  .entry-points li a:hover {                                    
+      255 -  background: #e5dac1;                                        
+      255 +  border-left-color: var(--color-terracotta);                 
+      256 +  background: #efe9de;                                        
+      257  }                                                             
+      258                                                                
+      259  .entry-points strong {                                        
+      260    display: block;                                             
+      261 +  font-family: var(--font-heading);                           
+      262 +  font-size: 1.15rem;                                         
+      263 +  font-weight: 600;                                           
+      264    color: var(--color-text);                                   
+      265    margin-bottom: 0.25rem;                                     
+      266  }                                                             
+      267                                                                
+      268  .entry-points span {                                          
+      269    color: var(--color-text-muted);                             
+      270 -  font-size: 0.9rem;                                          
+      270 +  font-size: 0.95rem;                                         
+      271  }                                                             
+      272                                                                
+      273 -/* Page layout */                                             
+      273 +/* ============================================               
+      274 +   PAGE LAYOUTS                                               
+      275 +   ============================================ */            
+      276 +                                                              
+      277  .page-header,                                                 
+      278  .question-header,                                             
+      279  .method-header,                                               
+      280 -.project-header {                                             
+      281 -  margin-bottom: calc(var(--spacing) * 2);                    
+      280 +.project-header,                                              
+      281 +.section-header {                                             
+      282 +  margin-bottom: var(--spacing-lg);                           
+      283    padding-bottom: var(--spacing);                             
+      284    border-bottom: 1px solid var(--color-border);               
+      285  }                                                             
+      286                                                                
+      287  .label {                                                      
+      288 -  font-size: 0.8rem;                                          
+      288 +  display: inline-block;                                      
+      289 +  font-size: 0.75rem;                                         
+      290    text-transform: uppercase;                                  
+      291 -  letter-spacing: 0.05em;                                     
+      292 -  color: var(--color-accent);                                 
+      291 +  letter-spacing: 0.1em;                                      
+      292 +  color: var(--color-terracotta);                             
+      293 +  font-weight: 600;                                           
+      294    margin-bottom: 0.5rem;                                      
+      295  }                                                             
+      296                                                                
+      297  .summary {                                                    
+      298 +  font-family: var(--font-heading);                           
+      299    color: var(--color-text-muted);                             
+      300 -  font-size: 1.1rem;                                          
+      300 +  font-size: 1.15rem;                                         
+      301 +  font-style: italic;                                         
+      302    margin-top: 0.5rem;                                         
+      303  }                                                             
+      304                                                                
+      305  .scale {                                                      
+      306    font-size: 0.9rem;                                          
+      307    color: var(--color-text-muted);                             
+      308 +  margin-top: 0.5rem;                                         
+      309  }                                                             
+      310                                                                
+      311  /* Related section */                                         
+      312  .related {                                                    
+      313 -  margin-top: calc(var(--spacing) * 2);                       
+      313 +  margin-top: var(--spacing-lg);                              
+      314    padding-top: var(--spacing);                                
+      315    border-top: 1px solid var(--color-border);                  
+      316  }                                                             
+      317                                                                
+      318  .related h3 {                                                 
+      319 -  font-size: 0.9rem;                                          
+      319 +  font-size: 0.8rem;                                          
+      320    text-transform: uppercase;                                  
+      321 -  letter-spacing: 0.05em;                                     
+      321 +  letter-spacing: 0.08em;                                     
+      322    color: var(--color-text-muted);                             
+      323 +  font-family: var(--font-body);                              
+      324 +  font-weight: 600;                                           
+      325 +  margin-bottom: 0.75rem;                                     
+      326  }                                                             
+      327                                                                
+      328 +.related h3::after {                                          
+      329 +  display: none;                                              
+      330 +}                                                             
+      331 +                                                              
+      332  .related ul {                                                 
+      333    list-style: none;                                           
+      334    padding: 0;                                                 
+      335  }                                                             
+      336                                                                
+      337 -/* Collection lists */                                        
+      338 -.section-header {                                             
+      339 -  margin-bottom: calc(var(--spacing) * 2);                    
+      337 +.related li {                                                 
+      338 +  margin-bottom: 0.4rem;                                      
+      339  }                                                             
+      340                                                                
+      341 +/* Project links */                                           
+      342 +.project-links {                                              
+      343 +  margin-top: var(--spacing);                                 
+      344 +}                                                             
+      345 +                                                              
+      346 +.repo-link {                                                  
+      347 +  display: inline-block;                                      
+      348 +  padding: 0.6rem 1.2rem;                                     
+      349 +  background: var(--color-charcoal);                          
+      350 +  color: var(--color-sun-gold);                               
+      351 +  text-decoration: none;                                      
+      352 +  border-radius: 4px;                                         
+      353 +  font-size: 0.9rem;                                          
+      354 +  transition: background 0.2s ease;                           
+      355 +}                                                             
+      356 +                                                              
+      357 +.repo-link:hover {                                            
+      358 +  background: #35312a;                                        
+      359 +  color: #fff;                                                
+      360 +}                                                             
+      361 +                                                              
+      362 +/* ============================================               
+      363 +   COLLECTION LISTS (Questions, Methods, Projects)            
+      364 +   ============================================ */            
+      365 +                                                              
+      366  .collection-list {                                            
+      367    list-style: none;                                           
+      368    padding: 0;                                                 
+      369  }                                                             
+      370                                                                
+      371  .collection-item {                                            
+      372 -  margin-bottom: var(--spacing);                              
+      373 -  padding-bottom: var(--spacing);                             
+      372 +  margin-bottom: 1.5rem;                                      
+      373 +  padding-bottom: 1.5rem;                                     
+      374    border-bottom: 1px solid var(--color-border);               
+      375  }                                                             
+      376                                                                
+     ...
+      302                                                                
+      303  .collection-item a {                                          
+      304    text-decoration: none;                                      
+      305 +  display: block;                                             
+      306  }                                                             
+      307                                                                
+      308  .collection-item h2 {                                         
+      309 -  font-size: 1.2rem;                                          
+      309 +  font-size: 1.3rem;                                          
+      310    margin: 0 0 0.5rem 0;                                       
+      311    color: var(--color-text);                                   
+      312 +  padding-bottom: 0;                                          
+      313  }                                                             
+      314                                                                
+      315 +.collection-item h2::after {                                  
+      316 +  display: none;                                              
+      317 +}                                                             
+      318 +                                                              
+      319  .collection-item:hover h2 {                                   
+      320 -  color: var(--color-accent);                                 
+      320 +  color: var(--color-terracotta);                             
+      321  }                                                             
+      322                                                                
+      323  .collection-item p {                                          
+     ...
+      321  }                                                             
+      322                                                                
+      323  .project-meta {                                               
+      324 -  margin-top: 0.5rem;                                         
+      325 -  font-size: 0.8rem;                                          
+      324 +  margin-top: 0.75rem;                                        
+      325 +  display: flex;                                              
+      326 +  gap: 0.5rem;                                                
+      327 +  flex-wrap: wrap;                                            
+      328  }                                                             
+      329                                                                
+      330  .project-meta .status,                                        
+      331  .project-meta .scale {                                        
+      332 -  background: var(--color-bg-alt);                            
+      333 -  padding: 0.2em 0.5em;                                       
+      332 +  font-size: 0.75rem;                                         
+      333 +  text-transform: uppercase;                                  
+      334 +  letter-spacing: 0.05em;                                     
+      335 +  background: var(--color-bg-warm);                           
+      336 +  color: var(--color-text-muted);                             
+      337 +  padding: 0.25em 0.6em;                                      
+      338    border-radius: 3px;                                         
+      339 -  margin-right: 0.5rem;                                       
+      339  }                                                             
+      340                                                                
+      341 -/* Footer */                                                  
+      341 +.project-meta .status {                                       
+      342 +  background: rgba(123, 147, 97, 0.15);                       
+      343 +  color: var(--color-olive);                                  
+      344 +}                                                             
+      345 +                                                              
+      346 +/* ============================================               
+      347 +   FOOTER                                                     
+      348 +   ============================================ */            
+      349 +                                                              
+      350  .site-footer {                                                
+      351 -  padding: calc(var(--spacing) * 2) 0;                        
+      352 -  border-top: 1px solid var(--color-border);                  
+      353 -  margin-top: calc(var(--spacing) * 2);                       
+      351 +  background: var(--color-bg-warm);                           
+      352 +  padding: var(--spacing-lg) 0;                               
+      353 +  margin-top: var(--spacing-lg);                              
+      354    text-align: center;                                         
+      355 +  border-top: 1px solid var(--color-border);                  
+      356  }                                                             
+      357                                                                
+      358  .footer-text {                                                
+      359 +  font-family: var(--font-heading);                           
+      360    color: var(--color-text-muted);                             
+      361 -  font-size: 0.9rem;                                          
+      361 +  font-size: 1rem;                                            
+      362 +  font-style: italic;                                         
+      363    margin-bottom: 0.5rem;                                      
+      364  }                                                             
+      365                                                                
+      366  .footer-contact {                                             
+      367 -  font-size: 0.85rem;                                         
+      367 +  font-size: 0.9rem;                                          
+      368  }                                                             
+      369                                                                
+      370 -/* Responsive */                                              
+      371 -@media (max-width: 600px) {                                   
+      370 +.footer-contact a {                                           
+      371 +  color: var(--color-text-muted);                             
+      372 +}                                                             
+      373 +                                                              
+      374 +.footer-contact a:hover {                                     
+      375 +  color: var(--color-terracotta);                             
+      376 +}                                                             
+      377 +                                                              
+      378 +/* ============================================               
+      379 +   RESPONSIVE                                                 
+      380 +   ============================================ */            
+      381 +                                                              
+      382 +@media (max-width: 640px) {                                   
+      383    html {                                                      
+      384      font-size: 16px;                                          
+      385    }                                                           
+     ...
+      363    }                                                           
+      364                                                                
+      365    .site-nav ul {                                              
+      366 -    gap: 1rem;                                                
+      366 +    gap: 0.1rem;                                              
+      367    }                                                           
+      368                                                                
+      369 +  .site-nav a {                                               
+      370 +    padding: 0.3rem 0.5rem;                                   
+      371 +    font-size: 0.85rem;                                       
+      372 +  }                                                           
+      373 +                                                              
+      374    .home-header h1 {                                           
+      375 -    font-size: 1.6rem;                                        
+      375 +    font-size: 2rem;                                          
+      376    }                                                           
+      377 +                                                              
+      378 +  h1 {                                                        
+      379 +    font-size: 1.8rem;                                        
+      380 +  }                                                           
+      381 +                                                              
+      382 +  h2 {                                                        
+      383 +    font-size: 1.4rem;                                        
+      384 +  }                                                           
+      385  }                                                             
+      386 +                                                              
+      387 +/* ============================================               
+      388 +   ACCESSIBILITY                                              
+      389 +   ============================================ */            
+      390 +                                                              
+      391 +@media (prefers-reduced-motion: reduce) {                     
+      392 +  * {                                                         
+      393 +    transition: none !important;                              
+      394 +  }                                                           
+      395 +                                                              
+      396 +  html {                                                      
+      397 +    scroll-behavior: auto;                                    
+      398 +  }                                                           
+      399 +}                                                             
+      400 +                                                              
+      401 +a:focus {                                                     
+      402 +  outline: 2px solid var(--color-terracotta);                 
+      403 +  outline-offset: 2px;                                        
+      404 +}                                                             
+      405 +                                                              
+      406 +a:focus:not(:focus-visible) {                                 
+      407 +  outline: none;                                              
+      408 +}                                                             
+      409 +                                                              
+      410 +/* Skip link */                                               
+      411 +.skip-link {                                                  
+      412 +  position: absolute;                                         
+      413 +  top: -100%;                                                 
+      414 +  left: 0;                                                    
+      415 +  background: var(--color-charcoal);                          
+      416 +  color: var(--color-sun-gold);                               
+      417 +  padding: 0.5rem 1rem;                                       
+      418 +  z-index: 1000;                                              
+      419 +}                                                             
+      420 +                                                              
+      421 +.skip-link:focus {                                            
+      422 +  top: 0;                                                     
+      423 +}                                                             
+
+⏺ Updated. Key changes from the Collective Futurecrafting inspiration:
+
+  Typography:
+  - Cormorant (serif) for headings — elegant, warm
+  - Nunito (sans-serif) for body — readable, friendly
+
+  Color palette:
+  - Charcoal #423D33 — header background, text
+  - Terracotta #D68A59 — accents, h2 underlines, hover states
+  - Sun Gold #E3B646 — header title, selection highlight
+  - Olive #7B9361 — status badges
+  - Warm backgrounds #faf9f7, #f5f0e8
+
+  Design elements:
+  - Sticky charcoal header with gold title
+  - Section headings with terracotta underline
+  - Entry point cards with hover border accent
+  - Terracotta list markers
+  - Clean, warm, grounded feel
+
+  To preview:
+  cd /Users/m3untold/Code/EarthianLabs/becoming-earthians
+  bundle install
+  bundle exec jekyll serve
+
+  Want to test it now, or should I make any adjustments first?
+
+> Max width should be 900 
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/assets/css/main.css)
+  ⎿  Added 2 lines, removed 2 lines                                      
+      28    --font-mono: 'SF Mono', Consolas, monospace;                 
+      29                                                                 
+      30    /* Layout */                                                 
+      31 -  --max-width: 760px;                                          
+      32 -  --max-width-wide: 1000px;                                    
+      31 +  --max-width: 900px;                                          
+      32 +  --max-width-wide: 1100px;                                    
+      33    --spacing: 1.5rem;                                           
+      34    --spacing-lg: 3rem;                                          
+      35  }                                                              
+
+⏺ Done. Content max-width is now 900px, header 1100px.
+
+> Let's import phosphor icons 
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/_layouts/default.html)
+  ⎿  Added 2 lines                                                       
+       6    <title>{% if page.title %}{{ page.title }} | {% endif %}{{   
+          site.title }}</title>                                          
+       7    <meta name="description" content="{{ page.summary | default: 
+           site.description }}">                                         
+       8    <link rel="stylesheet" href="{{ '/assets/css/main.css' |     
+          relative_url }}">                                              
+       9 +  <!-- Phosphor Icons -->                                      
+      10 +  <script                                                      
+         +src="https://unpkg.com/@phosphor-icons/web"></script>          
+      11  </head>                                                        
+      12  <body>                                                         
+      13    {% include header.html %}                                    
+
+⏺ Done. Phosphor icons are now available. Usage:
+
+  <i class="ph ph-arrow-right"></i>           <!-- Regular -->
+  <i class="ph-bold ph-house"></i>            <!-- Bold -->
+  <i class="ph-light ph-compass"></i>         <!-- Light -->
+  <i class="ph-duotone ph-tree"></i>          <!-- Duotone -->
+
+  Want me to add icons to the nav, entry points, or anywhere else?
+
+> We should ensure fonts and icons are served locally 
+
+⏺ Bash(mkdir -p
+      /Users/m3untold/Code/EarthianLabs/becoming-earthians/assets/fonts)
+  ⎿  (No content)
+
+⏺ Bash(cd /Users/m3untold/Code/EarthianLabs/becoming-earthians/assets/fonts && \
+      curl -L -o cormorant-v21-latin.zip
+      "https://gwfh.mranftl.com/api/fonts/cormorant?downl…)
+  ⎿    % Total    % Received % Xferd  Average Speed   Time    Time     Time
+      Current
+                                      Dload  Upload   Total   Spent    Left
+     … +15 lines (ctrl+o to expand)
+
+⏺ Bash(\
+      unzip -o cormorant-v21-latin.zip && \…)
+  ⎿  Archive:  cormorant-v21-latin.zip             
+       inflating: cormorant-v24-latin-regular.woff
+       inflating: cormorant-v24-latin-regular.woff2
+     … +39 lines (ctrl+o to expand)
+
+⏺ Bash(mkdir -p
+      /Users/m3untold/Code/EarthianLabs/becoming-earthians/assets/icons && \
+      cd /Users/m3untold/Code/EarthianLabs/becoming-earthians/assets/icons &&
+      \…)
+  ⎿    % Total    % Received % Xferd  Average Speed   Time    Time     Time
+      Current
+                                      Dload  Upload   Total   Spent    Left
+     … +25 lines (ctrl+o to expand)
+
+⏺ Read(~/Code/EarthianLabs/becoming-earthians/assets/icons/phosphor.css)
+  ⎿  Read 50 lines
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/assets/icons/phosphor.css)
+  ⎿  Added 1 line, removed 5 lines                                       
+      1  @font-face {                                                    
+      2    font-family: "Phosphor";                                      
+      3 -  src:                                                          
+      4 -    url("./Phosphor.woff2") format("woff2"),                    
+      5 -    url("./Phosphor.woff") format("woff"),                      
+      6 -    url("./Phosphor.ttf") format("truetype"),                   
+      7 -    url("./Phosphor.svg#Phosphor") format("svg");               
+      3 +  src: url("./Phosphor.woff2") format("woff2");                 
+      4    font-weight: normal;                                          
+      5    font-style: normal;                                           
+      6    font-display: block;                                          
+
+⏺ Read(~/Code/EarthianLabs/becoming-earthians/assets/icons/phosphor-bold.css)
+  ⎿  Read 15 lines
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/assets/icons/phosphor-bold.css)
+  ⎿  Added 1 line, removed 5 lines                                       
+      1  @font-face {                                                    
+      2    font-family: "Phosphor-Bold";                                 
+      3 -  src:                                                          
+      4 -    url("./Phosphor-Bold.woff2") format("woff2"),               
+      5 -    url("./Phosphor-Bold.woff") format("woff"),                 
+      6 -    url("./Phosphor-Bold.ttf") format("truetype"),              
+      7 -    url("./Phosphor-Bold.svg#Phosphor-Bold") format("svg");     
+      3 +  src: url("./Phosphor-Bold.woff2") format("woff2");            
+      4    font-weight: normal;                                          
+      5    font-style: normal;                                           
+      6    font-display: block;                                          
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/assets/css/main.css)
+  ⎿  Added 73 lines, removed 2 lines                                     
+       1  /* Becoming Earthians — Styling */                             
+       2  /* Orientation before explanation. Compression without         
+          reduction. */                                                  
+       3                                                                 
+       4 -/* Fonts */                                                    
+       5 -@import                                                        
+         -url('https://fonts.googleapis.com/css2?family=Cormorant:wght@4 
+         -00;500;600;700&family=Nunito:wght@400;500;600&display=swap');  
+       4 +/* ============================================                
+       5 +   LOCAL FONTS                                                 
+       6 +   ============================================ */             
+       7                                                                 
+       8 +/* Cormorant - Headings */                                     
+       9 +@font-face {                                                   
+      10 +  font-family: 'Cormorant';                                    
+      11 +  src: url('../fonts/cormorant-v24-latin-regular.woff2')       
+         +format('woff2');                                               
+      12 +  font-weight: 400;                                            
+      13 +  font-style: normal;                                          
+      14 +  font-display: swap;                                          
+      15 +}                                                              
+      16 +                                                               
+      17 +@font-face {                                                   
+      18 +  font-family: 'Cormorant';                                    
+      19 +  src: url('../fonts/cormorant-v24-latin-italic.woff2')        
+         +format('woff2');                                               
+      20 +  font-weight: 400;                                            
+      21 +  font-style: italic;                                          
+      22 +  font-display: swap;                                          
+      23 +}                                                              
+      24 +                                                               
+      25 +@font-face {                                                   
+      26 +  font-family: 'Cormorant';                                    
+      27 +  src: url('../fonts/cormorant-v24-latin-500.woff2')           
+         +format('woff2');                                               
+      28 +  font-weight: 500;                                            
+      29 +  font-style: normal;                                          
+      30 +  font-display: swap;                                          
+      31 +}                                                              
+      32 +                                                               
+      33 +@font-face {                                                   
+      34 +  font-family: 'Cormorant';                                    
+      35 +  src: url('../fonts/cormorant-v24-latin-600.woff2')           
+         +format('woff2');                                               
+      36 +  font-weight: 600;                                            
+      37 +  font-style: normal;                                          
+      38 +  font-display: swap;                                          
+      39 +}                                                              
+      40 +                                                               
+      41 +@font-face {                                                   
+      42 +  font-family: 'Cormorant';                                    
+      43 +  src: url('../fonts/cormorant-v24-latin-700.woff2')           
+         +format('woff2');                                               
+      44 +  font-weight: 700;                                            
+      45 +  font-style: normal;                                          
+      46 +  font-display: swap;                                          
+      47 +}                                                              
+      48 +                                                               
+      49 +/* Nunito - Body */                                            
+      50 +@font-face {                                                   
+      51 +  font-family: 'Nunito';                                       
+      52 +  src: url('../fonts/nunito-v32-latin-regular.woff2')          
+         +format('woff2');                                               
+      53 +  font-weight: 400;                                            
+      54 +  font-style: normal;                                          
+      55 +  font-display: swap;                                          
+      56 +}                                                              
+      57 +                                                               
+      58 +@font-face {                                                   
+      59 +  font-family: 'Nunito';                                       
+      60 +  src: url('../fonts/nunito-v32-latin-500.woff2')              
+         +format('woff2');                                               
+      61 +  font-weight: 500;                                            
+      62 +  font-style: normal;                                          
+      63 +  font-display: swap;                                          
+      64 +}                                                              
+      65 +                                                               
+      66 +@font-face {                                                   
+      67 +  font-family: 'Nunito';                                       
+      68 +  src: url('../fonts/nunito-v32-latin-600.woff2')              
+         +format('woff2');                                               
+      69 +  font-weight: 600;                                            
+      70 +  font-style: normal;                                          
+      71 +  font-display: swap;                                          
+      72 +}                                                              
+      73 +                                                               
+      74 +/* ============================================                
+      75 +   CSS VARIABLES                                               
+      76 +   ============================================ */             
+      77 +                                                               
+      78  :root {                                                        
+      79    /* Earth palette - inspired by Collective Futurecrafting */  
+      80    --color-terracotta: #D68A59;                                 
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/_layouts/default.html)
+  ⎿  Added 3 lines, removed 2 lines                                      
+       6    <title>{% if page.title %}{{ page.title }} | {% endif %}{{   
+          site.title }}</title>                                          
+       7    <meta name="description" content="{{ page.summary | default: 
+           site.description }}">                                         
+       8    <link rel="stylesheet" href="{{ '/assets/css/main.css' |     
+          relative_url }}">                                              
+       9 -  <!-- Phosphor Icons -->                                      
+      10 -  <script                                                      
+         -src="https://unpkg.com/@phosphor-icons/web"></script>          
+       9 +  <!-- Phosphor Icons (local) -->                              
+      10 +  <link rel="stylesheet" href="{{ '/assets/icons/phosphor.css' 
+         + | relative_url }}">                                           
+      11 +  <link rel="stylesheet" href="{{                              
+         +'/assets/icons/phosphor-bold.css' | relative_url }}">          
+      12  </head>                                                        
+      13  <body>                                                         
+      14    {% include header.html %}                                    
+
+⏺ Bash(cd /Users/m3untold/Code/EarthianLabs/becoming-earthians/assets/fonts && \
+      rm -f *.woff *.ttf *.eot *.svg && \…)
+  ⎿  total 352                                            
+     drwxr-xr-x  10 m3untold  staff    320 30 Dec 13:33 .
+     drwxr-xr-x   5 m3untold  staff    160 30 Dec 13:32 ..
+     … +16 lines (ctrl+o to expand)
+
+⏺ Done. All assets now served locally:
+
+  Fonts (assets/fonts/):
+  - Cormorant: regular, italic, 500, 600, 700 (woff2)
+  - Nunito: regular, 500, 600 (woff2)
+
+  Icons (assets/icons/):
+  - phosphor.css + Phosphor.woff2 (regular weight)
+  - phosphor-bold.css + Phosphor-Bold.woff2 (bold weight)
+
+  No external requests to Google Fonts or unpkg.
+
+  Usage remains the same:
+  <i class="ph ph-arrow-right"></i>
+  <i class="ph-bold ph-compass"></i>
+
+> We need a flat card based component to containt content 
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/assets/css/main.css)
+  ⎿  Added 101 lines                                                     
+      574  }                                                             
+      575                                                                
+      576  /* ============================================               
+      577 +   CARDS                                                      
+      578 +   ============================================ */            
+      579 +                                                              
+      580 +.card {                                                       
+      581 +  background: var(--color-bg-warm);                           
+      582 +  border-radius: 8px;                                         
+      583 +  padding: 1.5rem;                                            
+      584 +  margin-bottom: 1rem;                                        
+      585 +}                                                             
+      586 +                                                              
+      587 +.card-header {                                                
+      588 +  display: flex;                                              
+      589 +  align-items: flex-start;                                    
+      590 +  gap: 1rem;                                                  
+      591 +  margin-bottom: 1rem;                                        
+      592 +}                                                             
+      593 +                                                              
+      594 +.card-icon {                                                  
+      595 +  font-size: 1.5rem;                                          
+      596 +  color: var(--color-terracotta);                             
+      597 +  flex-shrink: 0;                                             
+      598 +  line-height: 1;                                             
+      599 +}                                                             
+      600 +                                                              
+      601 +.card-title {                                                 
+      602 +  font-family: var(--font-heading);                           
+      603 +  font-size: 1.25rem;                                         
+      604 +  font-weight: 600;                                           
+      605 +  color: var(--color-text);                                   
+      606 +  margin: 0;                                                  
+      607 +  line-height: 1.3;                                           
+      608 +}                                                             
+      609 +                                                              
+      610 +.card-title::after {                                          
+      611 +  display: none;                                              
+      612 +}                                                             
+      613 +                                                              
+      614 +.card-subtitle {                                              
+      615 +  font-size: 0.85rem;                                         
+      616 +  color: var(--color-text-muted);                             
+      617 +  margin-top: 0.25rem;                                        
+      618 +}                                                             
+      619 +                                                              
+      620 +.card-body {                                                  
+      621 +  color: var(--color-text);                                   
+      622 +  font-size: 0.95rem;                                         
+      623 +}                                                             
+      624 +                                                              
+      625 +.card-body p:last-child {                                     
+      626 +  margin-bottom: 0;                                           
+      627 +}                                                             
+      628 +                                                              
+      629 +.card-footer {                                                
+      630 +  margin-top: 1rem;                                           
+      631 +  padding-top: 1rem;                                          
+      632 +  border-top: 1px solid var(--color-border);                  
+      633 +  font-size: 0.9rem;                                          
+      634 +}                                                             
+      635 +                                                              
+      636 +/* Card variants */                                           
+      637 +.card--outline {                                              
+      638 +  background: transparent;                                    
+      639 +  border: 1px solid var(--color-border);                      
+      640 +}                                                             
+      641 +                                                              
+      642 +.card--accent {                                               
+      643 +  border-left: 3px solid var(--color-terracotta);             
+      644 +}                                                             
+      645 +                                                              
+      646 +.card--clickable {                                            
+      647 +  cursor: pointer;                                            
+      648 +  transition: all 0.2s ease;                                  
+      649 +  text-decoration: none;                                      
+      650 +  display: block;                                             
+      651 +  color: inherit;                                             
+      652 +}                                                             
+      653 +                                                              
+      654 +.card--clickable:hover {                                      
+      655 +  background: #efe9de;                                        
+      656 +  border-color: var(--color-terracotta);                      
+      657 +}                                                             
+      658 +                                                              
+      659 +.card--clickable:hover .card-title {                          
+      660 +  color: var(--color-terracotta);                             
+      661 +}                                                             
+      662 +                                                              
+      663 +/* Card grid */                                               
+      664 +.card-grid {                                                  
+      665 +  display: grid;                                              
+      666 +  gap: 1rem;                                                  
+      667 +}                                                             
+      668 +                                                              
+      669 +.card-grid--2 {                                               
+      670 +  grid-template-columns: repeat(auto-fit, minmax(280px,       
+          +1fr));                                                        
+      671 +}                                                             
+      672 +                                                              
+      673 +.card-grid--3 {                                               
+      674 +  grid-template-columns: repeat(auto-fit, minmax(240px,       
+          +1fr));                                                        
+      675 +}                                                             
+      676 +                                                              
+      677 +/* ============================================               
+      678     FOOTER                                                     
+      679     ============================================ */            
+      680                                                                
+
+⏺ Done. Card component with variants:
+
+  Basic card:
+  <div class="card">
+    <div class="card-header">
+      <i class="ph ph-compass card-icon"></i>
+      <div>
+        <h3 class="card-title">Card Title</h3>
+        <p class="card-subtitle">Optional subtitle</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <p>Card content goes here.</p>
+    </div>
+  </div>
+
+  Variants:
+  <div class="card card--accent">...</div>        <!-- Terracotta left border -->
+  <div class="card card--outline">...</div>       <!-- Transparent with border -->
+  <a href="#" class="card card--clickable">...</a> <!-- Hover effects, linkable -->
+
+  Grid layout:
+  <div class="card-grid card-grid--2">  <!-- 2-column responsive -->
+    <div class="card">...</div>
+    <div class="card">...</div>
+  </div>
+
+  <div class="card-grid card-grid--3">  <!-- 3-column responsive -->
+    ...
+  </div>
+
+  Want me to update the entry points on the home page to use cards, or apply them somewhere else?
+
+> Let's apply on projects 
+
+⏺ Read(~/Code/EarthianLabs/becoming-earthians/projects/index.html)
+  ⎿  Read 29 lines
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/projects/index.html)
+  ⎿  Added 22 lines, removed 13 lines                                    
+       9      <p class="summary">Concrete instantiations of the inquiry. 
+           Projects are probes, not products.</p>                        
+      10    </header>                                                    
+      11                                                                 
+      12 -  <ul class="collection-list projects-list">                   
+      12 +  <div class="card-grid card-grid--2">                         
+      13      {% for project in site.projects %}                         
+      14 -    <li class="collection-item project-item">                  
+      15 -      <a href="{{ project.url | relative_url }}">              
+      16 -        <h2>{{ project.title }}</h2>                           
+      17 -        {% if project.summary %}                               
+      18 -        <p>{{ project.summary }}</p>                           
+      19 -        {% endif %}                                            
+      20 -        <div class="project-meta">                             
+      21 -          {% if project.status %}<span class="status">{{       
+         -project.status }}</span>{% endif %}                            
+      22 -          {% if project.scale %}<span class="scale">{{         
+         -project.scale }}</span>{% endif %}                             
+      14 +    <a href="{{ project.url | relative_url }}" class="card     
+         +card--clickable">                                              
+      15 +      <div class="card-header">                                
+      16 +        <i class="ph {% if project.icon %}{{ project.icon }}{% 
+         + else %}ph-cube{% endif %} card-icon"></i>                     
+      17 +        <div>                                                  
+      18 +          <h3 class="card-title">{{ project.title }}</h3>      
+      19 +          {% if project.scale %}                               
+      20 +          <p class="card-subtitle">{{ project.scale }}</p>     
+      21 +          {% endif %}                                          
+      22          </div>                                                 
+      23 -      </a>                                                     
+      24 -    </li>                                                      
+      23 +      </div>                                                   
+      24 +      {% if project.summary %}                                 
+      25 +      <div class="card-body">                                  
+      26 +        <p>{{ project.summary }}</p>                           
+      27 +      </div>                                                   
+      28 +      {% endif %}                                              
+      29 +      {% if project.status %}                                  
+      30 +      <div class="card-footer">                                
+      31 +        <span class="status-badge">{{ project.status }}</span> 
+      32 +      </div>                                                   
+      33 +      {% endif %}                                              
+      34 +    </a>                                                       
+      35      {% endfor %}                                               
+      36 -  </ul>                                                        
+      36 +  </div>                                                       
+      37  </div>                                                         
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/assets/css/main.css)
+  ⎿  Added 11 lines                                                      
+      633    font-size: 0.9rem;                                          
+      634  }                                                             
+      635                                                                
+      636 +.status-badge {                                               
+      637 +  display: inline-block;                                      
+      638 +  font-size: 0.75rem;                                         
+      639 +  text-transform: uppercase;                                  
+      640 +  letter-spacing: 0.05em;                                     
+      641 +  background: rgba(123, 147, 97, 0.15);                       
+      642 +  color: var(--color-olive);                                  
+      643 +  padding: 0.25em 0.6em;                                      
+      644 +  border-radius: 3px;                                         
+      645 +}                                                             
+      646 +                                                              
+      647  /* Card variants */                                           
+      648  .card--outline {                                              
+      649    background: transparent;                                    
+
+⏺ Now let me add icons to each project:
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/_projects/entrainment-coherence-
+        abm.md)
+  ⎿  Added 1 line                                                        
+       4  summary: Agent-based model testing how collective systems      
+          maintain adaptive capacity under stress.                       
+       5  status: Active research                                        
+       6  scale: Collective                                              
+       7 +icon: ph-graph                                                 
+       8  repo: https://github.com/m3data/entrainment-coherence-abm      
+       9  related_questions:                                             
+      10    - adaptive-capacity                                          
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/_projects/earthian-biosense.md)
+  ⎿  Added 1 line                                                        
+       4  summary: Biosignal acquisition and phase dynamics for sensing  
+          coherence in living systems.                                   
+       5  status: Active development                                     
+       6  scale: Individual / Dyadic                                     
+       7 +icon: ph-heartbeat                                             
+       8  related_questions:                                             
+       9    - entangled-cognition                                        
+      10    - coherence-vs-entrainment                                   
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/_projects/semantic-climate.md)
+  ⎿  Added 1 line                                                        
+       4  summary: Semantic coupling analysis for detecting coherence    
+          patterns in dialogue.                                          
+       5  status: Active development                                     
+       6  scale: Dyadic / Collective                                     
+       7 +icon: ph-chats-circle                                          
+       8  related_questions:                                             
+       9    - entangled-cognition                                        
+      10    - coherence-vs-entrainment                                   
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/_projects/somatic-ai-safety.md)
+  ⎿  Added 1 line                                                        
+       4  summary: Public-facing brief on human-side instrumentation for 
+           AI safety.                                                    
+       5  status: Exploratory                                            
+       6  scale: Socio-technical                                         
+       7 +icon: ph-shield-check                                          
+       8  related_questions:                                             
+       9    - entangled-cognition                                        
+      10  ---                                                            
+
+⏺ Done. Projects page now uses card grid with icons:
+
+  | Project                   | Icon            |
+  |---------------------------|-----------------|
+  | Entrainment-Coherence ABM | ph-graph        |
+  | EarthianBioSense          | ph-heartbeat    |
+  | Semantic Climate          | ph-chats-circle |
+  | Somatic AI Safety         | ph-shield-check |
+
+  Cards show:
+  - Icon + title + scale (header)
+  - Summary (body)
+  - Status badge (footer)
+
+  Hover reveals terracotta accent. Want to apply the same treatment to Questions or Methods?
+
+> yes, apply to both 
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/questions/index.html)
+  ⎿  Added 14 lines, removed 9 lines                                     
+       9      <p class="summary">The conceptual spine of this inquiry.   
+          Each question opens onto methods, projects, and writings that  
+          engage it.</p>                                                 
+      10    </header>                                                    
+      11                                                                 
+      12 -  <ul class="collection-list">                                 
+      12 +  <div class="card-grid card-grid--2">                         
+      13      {% for question in site.questions %}                       
+      14 -    <li class="collection-item">                               
+      15 -      <a href="{{ question.url | relative_url }}">             
+      16 -        <h2>{{ question.title }}</h2>                          
+      17 -        {% if question.summary %}                              
+      14 +    <a href="{{ question.url | relative_url }}" class="card    
+         +card--clickable">                                              
+      15 +      <div class="card-header">                                
+      16 +        <i class="ph {% if question.icon %}{{ question.icon    
+         +}}{% else %}ph-question{% endif %} card-icon"></i>             
+      17 +        <div>                                                  
+      18 +          <h3 class="card-title">{{ question.title }}</h3>     
+      19 +        </div>                                                 
+      20 +      </div>                                                   
+      21 +      {% if question.summary %}                                
+      22 +      <div class="card-body">                                  
+      23          <p>{{ question.summary }}</p>                          
+      24 -        {% endif %}                                            
+      25 -      </a>                                                     
+      26 -    </li>                                                      
+      24 +      </div>                                                   
+      25 +      {% endif %}                                              
+      26 +    </a>                                                       
+      27      {% endfor %}                                               
+      28 -  </ul>                                                        
+      28 +  </div>                                                       
+      29  </div>                                                         
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/methods/index.html)
+  ⎿  Added 14 lines, removed 9 lines                                     
+       9      <p class="summary">How inquiry is conducted. Focus on      
+          epistemic posture, not tooling.</p>                            
+      10    </header>                                                    
+      11                                                                 
+      12 -  <ul class="collection-list">                                 
+      12 +  <div class="card-grid card-grid--2">                         
+      13      {% for method in site.methods %}                           
+      14 -    <li class="collection-item">                               
+      15 -      <a href="{{ method.url | relative_url }}">               
+      16 -        <h2>{{ method.title }}</h2>                            
+      17 -        {% if method.summary %}                                
+      14 +    <a href="{{ method.url | relative_url }}" class="card      
+         +card--clickable">                                              
+      15 +      <div class="card-header">                                
+      16 +        <i class="ph {% if method.icon %}{{ method.icon }}{%   
+         +else %}ph-compass{% endif %} card-icon"></i>                   
+      17 +        <div>                                                  
+      18 +          <h3 class="card-title">{{ method.title }}</h3>       
+      19 +        </div>                                                 
+      20 +      </div>                                                   
+      21 +      {% if method.summary %}                                  
+      22 +      <div class="card-body">                                  
+      23          <p>{{ method.summary }}</p>                            
+      24 -        {% endif %}                                            
+      25 -      </a>                                                     
+      26 -    </li>                                                      
+      24 +      </div>                                                   
+      25 +      {% endif %}                                              
+      26 +    </a>                                                       
+      27      {% endfor %}                                               
+      28 -  </ul>                                                        
+      28 +  </div>                                                       
+      29  </div>                                                         
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/_questions/adaptive-capacity.md)
+  ⎿  Added 1 line                                                        
+      2  title: How do collective systems maintain adaptive capacity     
+         under stress?                                                   
+      3  slug: adaptive-capacity                                         
+      4  summary: The central question of this inquiry — what enables    
+         systems to absorb perturbation without collapsing into rigidity 
+          or fragmenting into noise.                                     
+      5 +icon: ph-pulse                                                  
+      6  related_methods:                                                
+      7    - agent-based-modeling                                        
+      8    - relational-sensing                                          
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/_questions/coherence-vs-entrainm
+        ent.md)
+  ⎿  Added 1 line                                                        
+      2  title: What is the difference between coherence and             
+         entrainment?                                                    
+      3  slug: coherence-vs-entrainment                                  
+      4  summary: Two coordination regimes with profoundly different     
+         failure modes — and why the instinct to synchronise harder      
+         under stress is precisely wrong.                                
+      5 +icon: ph-waves                                                  
+      6  related_methods:                                                
+      7    - agent-based-modeling                                        
+      8    - relational-sensing                                          
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/_questions/entangled-cognition.m
+        d)
+  ⎿  Added 1 line                                                        
+      2  title: How does cognition emerge through relationship?          
+      3  slug: entangled-cognition                                       
+      4  summary: Cognition is not contained within individuals but      
+         emerges through coupling — between people, environments,        
+         technologies, and the more-than-human world.                    
+      5 +icon: ph-intersect-three                                        
+      6  related_methods:                                                
+      7    - relational-sensing                                          
+      8    - fielded-phenomenology                                       
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/_methods/agent-based-modeling.md
+        )
+  ⎿  Added 1 line                                                        
+      2  title: Agent-based modeling                                     
+      3  slug: agent-based-modeling                                      
+      4  summary: Exploring mechanism through simulation — testing how   
+         local rules produce emergent collective dynamics.               
+      5 +icon: ph-grid-nine                                              
+      6  related_questions:                                              
+      7    - adaptive-capacity                                           
+      8    - coherence-vs-entrainment                                    
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/_methods/relational-sensing.md)
+  ⎿  Added 1 line                                                        
+      2  title: Relational sensing                                       
+      3  slug: relational-sensing                                        
+      4  summary: Instrumenting the space between — detecting coupling,  
+         coherence, and entrainment in living systems.                   
+      5 +icon: ph-radio                                                  
+      6  related_questions:                                              
+      7    - entangled-cognition                                         
+      8    - coherence-vs-entrainment                                    
+
+⏺ Done. All three sections now use card grids:
+
+  Questions:
+  | Question                 | Icon               |
+  |--------------------------|--------------------|
+  | Adaptive capacity        | ph-pulse           |
+  | Coherence vs entrainment | ph-waves           |
+  | Entangled cognition      | ph-intersect-three |
+
+  Methods:
+  | Method               | Icon         |
+  |----------------------|--------------|
+  | Agent-based modeling | ph-grid-nine |
+  | Relational sensing   | ph-radio     |
+
+  Projects:
+  | Project                   | Icon            |
+  |---------------------------|-----------------|
+  | Entrainment-Coherence ABM | ph-graph        |
+  | EarthianBioSense          | ph-heartbeat    |
+  | Semantic Climate          | ph-chats-circle |
+  | Somatic AI Safety         | ph-shield-check |
+
+  Consistent card layout across all collection pages. Ready to test with bundle exec jekyll serve?
+
+> Rad progress. Let's wrap up this session with a dev update as the context 
+window is thinning. 
+
+⏺ documentation-flow-steward(Create session DEV_UPDATE)
+  ⎿  Done (5 tool uses · 21.1k tokens · 1m 52s)                            
+
+⏺ DEV_UPDATE created. Session captured.
+
+  Session Summary
+
+  Published:
+  - entrainment-coherence-abm → https://github.com/m3data/entrainment-coherence-abm
+
+  Scaffolded:
+  - becoming-earthians/ — Complete Jekyll portal (~60 files)
+  - Local fonts (Cormorant, Nunito) + icons (Phosphor)
+  - Card components across Questions, Methods, Projects
+  - Orientation page with civilizational framing
+
+  Articulated:
+  How can humanity cultivate adaptive capacity commensurate with the scale, speed, and entanglement of contemporary crises without collapsing into uniformity, control, or fragmentation?
+
+  Next session:
+  cd becoming-earthians && bundle install && bundle exec jekyll serve
+
+  Good work today, Mat. The portal gives the inquiry a public face.
+
+> I've added a claude-dev folder to this project. We prob also need a 
+CLAUDE.md project file too? 
+
+⏺ Write(~/Code/EarthianLabs/becoming-earthians/CLAUDE.md)
+  ⎿  Wrote 146 lines to ../../CLAUDE.md                                    
+     # CLAUDE.md — Becoming Earthians
+     Research portal and public-facing site for the EarthianLab inquiry
+     into adaptive capacity under planetary-scale stress.
+     ---
+     > **Status:** Scaffold complete, not yet deployed
+     > **Latest work:** Full Jekyll site structure, card components, local
+     fonts/icons
+     > **Next:** Test locally with `bundle exec jekyll serve`, refine
+     styling, add content
+     > **Latest update:**
+     `claude-dev/DEV_UPDATE_2025-12-30_becoming-earthians-scaffold.md` (in 
+     EarthianLab root)
+     … +136 lines (ctrl+o to expand)
+
+⏺ Read(~/Code/EarthianLabs/becoming-earthians/.gitignore)
+  ⎿  Read 20 lines
+
+⏺ Update(~/Code/EarthianLabs/becoming-earthians/.gitignore)
+  ⎿  Added 2 lines, removed 1 line                                       
+      15  .idea/                                                         
+      16  .vscode/                                                       
+      17                                                                 
+      18 -# Dev notes                                                    
+      18 +# Dev notes (private)                                          
+      19  claude-dev/                                                    
+      20 +CLAUDE.md                                                      
+
+⏺ Done. Created becoming-earthians/CLAUDE.md with:
+  - Current status and next steps
+  - Directory structure
+  - Design principles and styling reference
+  - Content status table
+  - Open work checklist
+
+  Added to .gitignore to keep it private (same pattern as other projects).
+
+> Let's continue in a new session :) 
+
+⏺ Sounds good. Solid session — the inquiry now has a public home taking shape.
+
+  See you in the next one, Mat.
+
+
+
