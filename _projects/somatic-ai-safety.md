@@ -2,8 +2,8 @@
 title: Somatic AI Safety
 slug: somatic-ai-safety
 summary: The blind spot in AI safety — instrumenting what emerges between model and human, not just the model itself.
-status: Published
-scale: Socio-technical
+status: Active research
+scale: Socio-technical ethics
 icon: ph-shield-check
 repo: https://github.com/m3data/somatic-ai-safety
 related_questions:
