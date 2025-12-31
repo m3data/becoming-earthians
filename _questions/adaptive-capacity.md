@@ -13,7 +13,7 @@ related_projects:
 
 ## The question
 
-Adaptive capacity is the ability to respond to changing conditions while maintaining essential function. At the level of organisms, this is called allostasis — stability through change. At the level of ecosystems, it is called resilience. At the level of societies, it remains poorly understood.
+Adaptive capacity is the ability to respond to changing conditions while maintaining essential function. In organisms, this is known as allostasis — stability through change. In ecosystems, it is framed as resilience. In societies, adaptive capacity is increasingly invoked, yet our ways of sensing, cultivating, and sustaining it — especially under prolonged stress — remain partial and uneven.
 
 The question is more specific:
 
