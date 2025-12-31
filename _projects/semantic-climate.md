@@ -88,7 +88,7 @@ The system classifies semantic dynamics into:
 - **Transitional** — Between states
 
 <figure class="diagram">
-  <img src="/assets/images/diagrams/coherence-patterns.svg" alt="Four coherence patterns shown as trajectory types: Breathing (figure-8 flow), Locked (tight loops), Fragmented (scattered segments), Transitional (shifting path)">
+  <img src="{{ '/assets/images/diagrams/coherence-patterns.svg' | relative_url }}" alt="Four coherence patterns shown as trajectory types: Breathing (figure-8 flow), Locked (tight loops), Fragmented (scattered segments), Transitional (shifting path)">
 </figure>
 
 ## Attractor basins

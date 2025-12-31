@@ -19,7 +19,7 @@ A model can be stylistically attuned while factually wrong. Relationally coheren
 The body knows before articulation. We now have instrumentation to detect this.
 
 <figure class="diagram">
-  <img src="/assets/images/diagrams/coupling-blind-spot.svg" alt="Diagram showing the blind spot in AI safety: Model (instrumented) on left, Human (adapting) on right, with the coupling zone between them — where epistemic override, somatic entrainment, and cognitive mimicry live — marked as the blind spot">
+  <img src="{{ '/assets/images/diagrams/coupling-blind-spot.svg' | relative_url }}" alt="Diagram showing the blind spot in AI safety: Model (instrumented) on left, Human (adapting) on right, with the coupling zone between them — where epistemic override, somatic entrainment, and cognitive mimicry live — marked as the blind spot">
 </figure>
 
 ## Core question

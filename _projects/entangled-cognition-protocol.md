@@ -29,7 +29,7 @@ Science gives us third-person observation. Contemplative traditions give us firs
 
 
 <figure class="diagram">
-  <img src="/assets/images/diagrams/mutual-constraint.svg" alt="Diagram showing mutual constraint between first-person experience (felt sense, embodied awareness, ritual attention) and third-person observation (instruments, observation, documentation), with bidirectional arrows showing each informing the other">
+  <img src="{{ '/assets/images/diagrams/mutual-constraint.svg' | relative_url }}" alt="Diagram showing mutual constraint between first-person experience (felt sense, embodied awareness, ritual attention) and third-person observation (instruments, observation, documentation), with bidirectional arrows showing each informing the other">
 </figure>
 
 <div class="scale-progression">

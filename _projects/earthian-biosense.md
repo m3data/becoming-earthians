@@ -20,7 +20,7 @@ EarthianBioSense provides instruments for sensing the difference between **entra
 These are not the same thing. Meditation sessions show high coherence (0.55) with low entrainment; rhythmic activity shows high entrainment (0.50+) with lower coherence. The relationship inverts depending on what the nervous system is doing.
 
 <figure class="diagram">
-  <img src="/assets/images/diagrams/entrainment-coherence-axes.svg" alt="Two-axis plot showing entrainment vs coherence: meditation in upper-left (high coherence, low entrainment), rhythmic activity in lower-right (high entrainment, lower coherence)">
+  <img src="{{ '/assets/images/diagrams/entrainment-coherence-axes.svg' | relative_url }}" alt="Two-axis plot showing entrainment vs coherence: meditation in upper-left (high coherence, low entrainment), rhythmic activity in lower-right (high entrainment, lower coherence)">
 </figure>
 
 ## Core question
