@@ -31,12 +31,8 @@ title: Home
     <ul class="entry-points">
       <li>
         <a href="{{ '/questions/adaptive-capacity/' | relative_url }}">
-          <strong>What keeps systems adaptive under pressure?</strong>
-        </a>
-      </li>
-      <li>
-        <a href="{{ '/questions/entangled-cognition/' | relative_url }}">
-          <strong>How does learning happen collectively without uniformity?</strong>
+          <strong>Adaptive capacity</strong>
+          <p>Under conditions of planetary-scale crises, adaptive capacity is critical to survival. It is the difference between transformation and collapse.</p>
         </a>
       </li>
     </ul>
@@ -46,16 +42,22 @@ title: Home
       <li>
         <a href="{{ '/questions/coherence-vs-entrainment/' | relative_url }}">
           <strong>Coherence versus entrainment</strong>
+          <p>Distinguishing between maintaining identity through change versus being captured by external rhythms.</p>
         </a>
       </li>
       <li>
         <a href="{{ '/questions/entangled-cognition/' | relative_url }}">
           <strong>Entangled cognition</strong>
+          <p>How cognition emerges through relationships between people, place, machines, ancestors, ecosystems, and the more-than-human world.</p>
         </a>
       </li>
+    </ul>
+    <h3 class="entry-category">Methods</h3>
+    <ul class="entry-points">
       <li>
         <a href="{{ '/methods/' | relative_url }}">
-          <strong>Relational sensing and modeling</strong>
+          <strong>Agent-based modeling and relational sensing</strong>
+          <p>Methods for exploring adaptive capacity through computational simulation and observation of relational dynamics.</p>
         </a>
       </li>
     </ul>
@@ -65,6 +67,7 @@ title: Home
       <li>
         <a href="{{ '/projects/' | relative_url }}">
           <strong>Projects</strong>
+          <p>A collection of different instantiations of the larger inquiry.</p>
         </a>
       </li>
     </ul>
